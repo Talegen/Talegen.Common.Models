@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Copyright>Copyright (c) Talegen, LLC. All rights reserved.</Copyright>
+    <Authors>Talegen, LLC</Authors>
+    <Description>A set of common models used in SaaS products related to tenant and customer management.</Description>
+    <PackageProjectUrl>http://talegen.com/</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>CRM</PackageTags>
+    <PackageReleaseNotes>Initial code release</PackageReleaseNotes>
+    <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Assets\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
