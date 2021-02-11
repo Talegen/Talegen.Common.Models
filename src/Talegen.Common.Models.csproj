@@ -12,14 +12,21 @@
     <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>CRM</PackageTags>
-    <PackageReleaseNotes>Initial code release</PackageReleaseNotes>
+    <PackageTags>Models</PackageTags>
+    <PackageReleaseNotes>Added additional shared models to be used across applications.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Projects\Talegen\GitHub\Talegen.Common.Models\src\Talegen.Common.Models.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
