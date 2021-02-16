@@ -17,25 +17,7 @@
 namespace Talegen.Common.Models.Shared.Queries
 {
     using System;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    /// <summary>
-    /// Contains an enumerated list of sort directions.
-    /// </summary>
-    [JsonConverter(typeof(StringEnumConverter))]
-    public enum SortDirection
-    {
-        /// <summary>
-        /// Ascending sort.
-        /// </summary>
-        Ascending,
-
-        /// <summary>
-        /// Descending sort.
-        /// </summary>
-        Descending
-    }
+    using Talegen.Common.Core.Extensions;
 
     /// <summary>
     /// This class contains parameters passed to the query for filtering.

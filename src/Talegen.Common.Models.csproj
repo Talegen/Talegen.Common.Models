@@ -13,10 +13,10 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Models</PackageTags>
-    <PackageReleaseNotes>Added additional shared models to be used across applications.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed Paginated Query to use Common.Core SortDirection enumeration.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.1.0</Version>
+    <Version>1.0.2.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
