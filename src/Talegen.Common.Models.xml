@@ -1044,21 +1044,6 @@
             Gets or sets the time zone short name.
             </summary>
         </member>
-        <member name="T:Talegen.Common.Models.Shared.Queries.SortDirection">
-            <summary>
-            Contains an enumerated list of sort directions.
-            </summary>
-        </member>
-        <member name="F:Talegen.Common.Models.Shared.Queries.SortDirection.Ascending">
-            <summary>
-            Ascending sort.
-            </summary>
-        </member>
-        <member name="F:Talegen.Common.Models.Shared.Queries.SortDirection.Descending">
-            <summary>
-            Descending sort.
-            </summary>
-        </member>
         <member name="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel">
             <summary>
             This class contains parameters passed to the query for filtering.
