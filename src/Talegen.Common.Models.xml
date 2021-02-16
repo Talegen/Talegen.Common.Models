@@ -1,0 +1,1280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Talegen.Common.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Talegen.Common.Models.Defaults">
+            <summary>
+            Contains a static set of common default values.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Defaults.DefaultLanguageCode">
+            <summary>
+            The default language code. English.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Defaults.DefaultTimeZone">
+            <summary>
+            The default time zone offset.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Defaults.CommonNamePrefixes">
+            <summary>
+            Available common titles.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.AddressTypes">
+            <summary>
+            Contains an enumerated list of address types.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.AddressTypes.Home">
+            <summary>
+            A home address.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.AddressTypes.Work">
+            <summary>
+            A work address.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.AddressTypes.Business">
+            <summary>
+            A business address.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.AddressTypes.Other">
+            <summary>
+            Other type of address.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.CommerceAddressTypes">
+            <summary>
+            Contains an enumerated list of commerce address types
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.CommerceAddressTypes.Billing">
+            <summary>
+            The billing address.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.CommerceAddressTypes.Mailing">
+            <summary>
+            The mailing address.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.Address">
+            <summary>
+            This class represents the basic postal address for an entity.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.Street1">
+            <summary>
+            Gets or sets the primary address street.
+            </summary>
+            <value>The primary address street.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.Street2">
+            <summary>
+            Gets or sets the secondary address street.
+            </summary>
+            <value>The secondary address street.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.City">
+            <summary>
+            Gets or sets the address city.
+            </summary>
+            <value>The address city.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.RegionState">
+            <summary>
+            Gets or sets the address state/region.
+            </summary>
+            <value>The state of the address state/region.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.PostalCode">
+            <summary>
+            Gets or sets the address postal/zip code.
+            </summary>
+            <value>The state of the address postal/zip code.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.Country">
+            <summary>
+            Gets or sets the address country.
+            </summary>
+            <value>The address country.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.CommerceType">
+            <summary>
+            Gets or sets the type of the commerce.
+            </summary>
+            <value>The type of the commerce.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.Primary">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Talegen.Common.Models.Contacts.Address" /> is primary.
+            </summary>
+            <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.Contact">
+            <summary>
+            This class represents a contact record.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.Names">
+            <summary>
+            Gets or sets the name of the primary contact name.
+            </summary>
+            <value>The name of the primary contact name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.Company">
+            <summary>
+            Gets or sets the company.
+            </summary>
+            <value>The company.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.PhoneNumbers">
+            <summary>
+            Gets or sets the phone numbers.
+            </summary>
+            <value>The phone numbers.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.EmailAddresses">
+            <summary>
+            Gets or sets the email addresses.
+            </summary>
+            <value>The email addresses.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.JobTitle">
+            <summary>
+            Gets or sets the job title.
+            </summary>
+            <value>The job title.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.Website">
+            <summary>
+            Gets or sets the website.
+            </summary>
+            <value>The website.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.IM">
+            <summary>
+            Gets or sets the instant messenger.
+            </summary>
+            <value>The instant messenger.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.Notes">
+            <summary>
+            Gets or sets the notes.
+            </summary>
+            <value>The notes.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Contact.Primary">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Talegen.Common.Models.Contacts.Contact" /> is primary.
+            </summary>
+            <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.ContactCompany">
+            <summary>
+            This class represents a minimum company contact record.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactCompany.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactCompany.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactCompany.Website">
+            <summary>
+            Gets or sets the website.
+            </summary>
+            <value>The website.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactCompany.Phone">
+            <summary>
+            Gets or sets the phone.
+            </summary>
+            <value>The phone.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactCompany.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+            <value>The email.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactCompany.Locations">
+            <summary>
+            Gets or sets the location.
+            </summary>
+            <value>The location.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactCompany.Primary">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Talegen.Common.Models.Contacts.ContactCompany" /> is primary.
+            </summary>
+            <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.GenderTypes">
+            <summary>
+            Contains an enumerated list of gender types.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.GenderTypes.None">
+            <summary>
+            No gender specified.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.GenderTypes.Male">
+            <summary>
+            Male gender.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.GenderTypes.Female">
+            <summary>
+            Female gender.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.GenderTypes.Other">
+            <summary>
+            Non-biological identity.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.ContactDetails">
+            <summary>
+            Contains an extended set of contact details.
+            </summary>
+            <seealso cref="T:Talegen.Common.Models.Contacts.Contact" />
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.CustomerId">
+            <summary>
+            Gets or sets the customer identifier.
+            </summary>
+            <value>The customer identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Nickname">
+            <summary>
+            Gets or sets the nickname.
+            </summary>
+            <value>The nickname.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Office">
+            <summary>
+            Gets or sets the office.
+            </summary>
+            <value>The office.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Profession">
+            <summary>
+            Gets or sets the profession.
+            </summary>
+            <value>The profession.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.ManagerName">
+            <summary>
+            Gets or sets the name of the manager.
+            </summary>
+            <value>The name of the manager.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.AssistantName">
+            <summary>
+            Gets or sets the name of the assistant.
+            </summary>
+            <value>The name of the assistant.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.SpousePartnerName">
+            <summary>
+            Gets or sets the name of the spouse partner.
+            </summary>
+            <value>The name of the spouse partner.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Children">
+            <summary>
+            Gets or sets the children.
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Birthday">
+            <summary>
+            Gets or sets the birthday.
+            </summary>
+            <value>The birthday.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Anniversary">
+            <summary>
+            Gets or sets the anniversary.
+            </summary>
+            <value>The anniversary.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Gender">
+            <summary>
+            Gets or sets the gender.
+            </summary>
+            <value>The gender.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>The language.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.TimeZone">
+            <summary>
+            Gets or sets the time zone.
+            </summary>
+            <value>The time zone.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactDetails.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>
+            <value>The tags.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.ContactName">
+            <summary>
+            This class implements the minimum properties for a contact name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactName.PrefixTitle">
+            <summary>
+            Gets or sets the name of the sir.
+            </summary>
+            <value>The name of the sir.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactName.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+            <value>The first name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactName.MiddleName">
+            <summary>
+            Gets or sets the name of the middle.
+            </summary>
+            <value>The name of the middle.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactName.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+            <value>The last name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactName.SuffixTitle">
+            <summary>
+            Gets or sets the suffix title of the name name.
+            </summary>
+            <value>The suffix title of the name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactName.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>The display name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.ContactName.Primary">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Talegen.Common.Models.Contacts.ContactName" /> is primary.
+            </summary>
+            <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.EmailTypes">
+            <summary>
+            Contains an enumerated list of phone types.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.EmailTypes.Personal">
+            <summary>
+            Personal e-mail address
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.EmailTypes.Work">
+            <summary>
+            Work e-mail address
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.EmailTypes.Support">
+            <summary>
+            Support contact e-mail address
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.EmailTypes.Other">
+            <summary>
+            Other e-mail address
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.Email">
+            <summary>
+            This class represents a contact e-mail address.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Email.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Email.Address">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+            <value>The email address.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Email.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="M:Talegen.Common.Models.Contacts.Email.ToString">
+            <summary>
+            Converts to string.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.Geography">
+            <summary>
+            This class represents the bare minimum of a geographic location.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Geography.Latitude">
+            <summary>
+            Gets or sets the latitude.
+            </summary>
+            <value>The latitude.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Geography.Longitude">
+            <summary>
+            Gets or sets the longitude.
+            </summary>
+            <value>The longitude.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.IGeography">
+            <summary>
+            This interface defines the minimum implementation of a geographic location class.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.IGeography.Latitude">
+            <summary>
+            Gets or sets the latitude.
+            </summary>
+            <value>The latitude.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.IGeography.Longitude">
+            <summary>
+            Gets or sets the longitude.
+            </summary>
+            <value>The longitude.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.Location">
+            <summary>
+            This class represents an address location with associated geographical information and identity.
+            </summary>
+            <seealso cref="T:Talegen.Common.Models.Contacts.Address" />
+            <seealso cref="T:Talegen.Common.Models.Contacts.IGeography" />
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Location.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Location.Latitude">
+            <summary>
+            Gets or sets the latitude.
+            </summary>
+            <value>The latitude.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Location.Longitude">
+            <summary>
+            Gets or sets the longitude.
+            </summary>
+            <value>The longitude.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.PhoneTypes">
+            <summary>
+            Contains an enumerated list of phone types.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.PhoneTypes.Personal">
+            <summary>
+            Personal phone number
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.PhoneTypes.Mobile">
+            <summary>
+            Mobile phone number
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.PhoneTypes.Work">
+            <summary>
+            Work phone number
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.PhoneTypes.Fax">
+            <summary>
+            A fax number.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Contacts.PhoneTypes.Other">
+            <summary>
+            Other phone number
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Contacts.Phone">
+            <summary>
+            This class represents a minimum definition of a phone number.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Phone.CountryCode">
+            <summary>
+            Gets or sets the country code.
+            </summary>
+            <value>The country code.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Phone.Number">
+            <summary>
+            Gets or sets the number.
+            </summary>
+            <value>The number.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Phone.Extension">
+            <summary>
+            Gets or sets the extension.
+            </summary>
+            <value>The extension.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Phone.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Metadata.Category">
+            <summary>
+            Contains a minimal definition of a category.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Metadata.Category.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Metadata.Category.ParentId">
+            <summary>
+            Gets or sets the parent identifier.
+            </summary>
+            <value>The parent identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Metadata.Category.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Metadata.Category.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Metadata.Category.Primary">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Talegen.Common.Models.Metadata.Category" /> is primary.
+            </summary>
+            <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Metadata.Tag">
+            <summary>
+            This class represents a tag
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Metadata.Tag.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Metadata.Tag.Name">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>The tag.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.MicroRoleModel">
+            <summary>
+            This class contains the bare minimum properties to represent a role in the interface.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroRoleModel.RoleId">
+            <summary>
+            Gets or sets the role identifier.
+            </summary>
+            <value>The role identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroRoleModel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.MicroUserModel">
+            <summary>
+            This class contains the bare minimum properties to represent a user in the interface.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.UserId">
+            <summary>
+            Gets or sets the unique identity of the user.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.Email">
+            <summary>
+            Gets or sets the user's e-mail address.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+            <value>The first name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+            <value>The last name.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.FullName">
+            <summary>
+            Gets the user full name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.UserName">
+            <summary>
+            Gets or sets the user name of the user.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.RoleTypes">
+            <summary>
+            Contains an enumerated list of role types.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Security.RoleTypes.System">
+            <summary>
+            System Roles Cannot be Deleted.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Security.RoleTypes.Defined">
+            <summary>
+            User Defined Roles.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.MinimalRoleModel">
+            <summary>
+            This class represents a minimal representation of a security role.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MinimalRoleModel.Description">
+            <summary>
+            Gets or sets the role description.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MinimalRoleModel.RoleType">
+            <summary>
+            Gets or sets the type of the role.
+            </summary>
+            <value>The type of the role.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MinimalRoleModel.Deleteable">
+            <summary>
+            Gets or sets a value indicating whether the role is a system role and cannot be deleted.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.MinimalUserModel">
+            <summary>
+            This class represents a user that is assigned to a role. It is a stripped down version of the user and returns only essential information related to the
+            user for role associations.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MinimalUserModel.Locale">
+            <summary>
+            Gets or sets the user's desired language.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MinimalUserModel.TimeZone">
+            <summary>
+            Gets or sets the user's time zone.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MinimalUserModel.Locked">
+            <summary>
+            Gets a value indicating whether the user is locked.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MinimalUserModel.LockExpirationDate">
+            <summary>
+            Gets or sets the lock expiration date.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.Queries.RoleQueryFilterModel">
+            <summary>
+            This class defines the administration role query filter model.
+            </summary>
+            <seealso cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" />
+        </member>
+        <member name="P:Talegen.Common.Models.Security.Queries.RoleQueryFilterModel.SearchText">
+            <summary>
+            Gets or sets the search text.
+            </summary>
+            <value>The search text.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.Queries.UserQueryFilterModel">
+            <summary>
+            This class defines the administration user query filter model.
+            </summary>
+            <seealso cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" />
+        </member>
+        <member name="P:Talegen.Common.Models.Security.Queries.UserQueryFilterModel.SearchText">
+            <summary>
+            Gets or sets the search text.
+            </summary>
+            <value>The search text.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.Queries.UserQueryFilterModel.OnlyActive">
+            <summary>
+            Gets or sets a value indicating whether the search filter should show only active users.
+            </summary>
+            <value><c>true</c> if only active; otherwise, <c>false</c> and return all users.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.RoleModel">
+            <summary>
+            This model class represents a security role within the application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.RoleModel.CreatedDate">
+            <summary>
+            Gets or sets the record created date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.RoleModel.CreatedBy">
+            <summary>
+            Gets or sets the user model for the creating user.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.RoleModel.UpdatedDate">
+            <summary>
+            Gets or sets the record last updated date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.RoleModel.UpdatedBy">
+            <summary>
+            Gets or sets the user model for the updating user.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.RoleModel.Default">
+            <summary>
+            Gets or sets a value indicating whether the role is automatically added to users when they are synchronized via the application subscription Redis channel.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.RoleModel.Users">
+            <summary>
+            Gets or sets a list of user models assigned to this role.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.RoleModel.Claims">
+            <summary>
+            Gets or sets the claims assigned to the role.
+            </summary>
+            <value>The claims assigned to the role.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.UserModel">
+            <summary>
+            This class represents a security user within the application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.CreatedDate">
+            <summary>
+            Gets or sets the date time when the account was created.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.CreatedBy">
+            <summary>
+            Gets or sets the user model for the creator user.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.UpdatedDate">
+            <summary>
+            Gets or sets the date time when the account was last updated.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.UpdatedBy">
+            <summary>
+            Gets or sets the user model for the updating user.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.Notes">
+            <summary>
+            Gets or sets the user notes.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.Active">
+            <summary>
+            Gets or sets a value indicating whether the user account is active.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.Deletable">
+            <summary>
+            Gets or sets a value indicating whether the user can be deleted. Typically set to true if the user model matches the current user. The current user
+            cannot delete themselves.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.Roles">
+            <summary>
+            Gets or sets a list of associated roles.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.UserModel.Claims">
+            <summary>
+            Gets or sets the claims.
+            </summary>
+            <value>The claims.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.DeleteResultModelBase">
+            <summary>
+            This abstract class defines common model properties to return during a delete action within the application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.DeleteResultModelBase.Id">
+            <summary>
+            Gets or sets the identity of the record that was deleted.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.DeleteResultModelBase.Successful">
+            <summary>
+            Gets or sets a value indicating whether the value was successful.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.DisplayValuePair`2">
+            <summary>
+            This class represents a base for displaying a name value pair combination.
+            </summary>
+            <typeparam name="TDisplay">Contains the display data type.</typeparam>
+            <typeparam name="TValue">Contains the value data type.</typeparam>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.DisplayValuePair`2.Display">
+            <summary>
+            Gets or sets the pair display value.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.DisplayValuePair`2.Value">
+            <summary>
+            Gets or sets the pair value.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.ErrorModel">
+            <summary>
+            This class represents an error message within the <see cref="T:Talegen.Common.Models.Shared.ErrorResponseModel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Shared.ErrorModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.ErrorModel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Shared.ErrorModel.#ctor(System.String,Talegen.Common.Core.Errors.ErrorType,System.DateTime,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.ErrorModel" /> class.
+            </summary>
+            <param name="message">Contains the error message text.</param>
+            <param name="type">Contains the error message type.</param>
+            <param name="eventDate">Contains the date time when the error was created.</param>
+            <param name="stackTrace">Contains an error stack trace message.</param>
+            <param name="propertyName">Contains the property name for validation errors.</param>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorModel.ErrorCategory">
+            <summary>
+            Gets or sets the message error type.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorModel.SuggestedErrorCode">
+            <summary>
+            Gets or sets a suggested error code.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorModel.ErrorType">
+            <summary>
+            Gets or sets the error message type.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorModel.Message">
+            <summary>
+            Gets or sets the error message text.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorModel.PropertyName">
+            <summary>
+            Gets or sets a related property name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorModel.EventDate">
+            <summary>
+            Gets or sets the date time when the error was generated.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorModel.StackTrace">
+            <summary>
+            Gets or sets the error stack trace generated if any.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.ErrorResponseModel">
+            <summary>
+            This class is used as the Error Response Model from an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorResponseModel.Messages">
+            <summary>
+            Gets the error messages.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorResponseModel.FailedIds">
+            <summary>
+            Gets or sets the failed ids.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.ErrorResponseModel.HasUnhandledException">
+            <summary>
+            Gets or sets a value indicating whether this instance has unhandled exception.
+            </summary>
+            <value><c>true</c> if this instance has unhandled exception; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.LanguageModel">
+            <summary>
+            This class represents a supported language definition within an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.LanguageModel.Default">
+            <summary>
+            Gets or sets a value indicating whether if the language is the default for identity server.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.LanguageModel.Active">
+            <summary>
+            Gets or sets a value indicating whether if the language is active and available.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase">
+            <summary>
+            This class contains basic created and updater properties for model records.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.CreatedDate">
+            <summary>
+            Gets or sets the record created date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.CreatedBy">
+            <summary>
+            Gets or sets the record creator model object.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.UpdatedDate">
+            <summary>
+            Gets or sets the record last updated date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.UpdatedBy">
+            <summary>
+            Gets or sets the record updater model object.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.MinimalLanguageModel">
+            <summary>
+            This class represents a minimal representation of a language within an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MinimalLanguageModel.LanguageCode">
+            <summary>
+            Gets or sets the unique language locale code.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MinimalLanguageModel.Name">
+            <summary>
+            Gets or sets the name of the language.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MinimalLanguageModel.AvailableLocale">
+            <summary>
+            Gets or sets a value indicating whether [available locale].
+            </summary>
+            <value><c>true</c> if [available locale]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.MinimalTimeZoneModel">
+            <summary>
+            This class represents a minimal set of time zone model information for an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MinimalTimeZoneModel.TimeZoneId">
+            <summary>
+            Gets or sets the time zone identity value.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.MinimalTimeZoneModel.ShortName">
+            <summary>
+            Gets or sets the time zone short name.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.Queries.SortDirection">
+            <summary>
+            Contains an enumerated list of sort directions.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Shared.Queries.SortDirection.Ascending">
+            <summary>
+            Ascending sort.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Shared.Queries.SortDirection.Descending">
+            <summary>
+            Descending sort.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel">
+            <summary>
+            This class contains parameters passed to the query for filtering.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" /> class.
+            </summary>
+            <param name="maxPageSize">Contains the maximum page size.</param>
+            <param name="currentPage">Contains an optional current page number.</param>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Page">
+            <summary>
+            Gets or sets current page number.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Limit">
+            <summary>
+            Gets or sets the result limit.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Sort">
+            <summary>
+            Gets or sets the name of the column to sort by.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Dir">
+            <summary>
+            Gets or sets the sort direction.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryResultModel`1">
+            <summary>
+            This class defines the basic query result model for the paginated query.
+            </summary>
+            <typeparam name="TQueryModel">The type of the query result.</typeparam>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryResultModel`1.TotalCount">
+            <summary>
+            Gets or sets the total records.
+            </summary>
+            <value>The total records.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryResultModel`1.Results">
+            <summary>
+            Gets or sets the results of the model query.
+            </summary>
+            <value>The results.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Shared.TimeZoneModel">
+            <summary>
+            This class represents a timezone model within an application.
+            </summary>
+            <seealso cref="T:Talegen.Common.Models.Shared.MinimalTimeZoneModel" />
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.LongName">
+            <summary>
+            Gets or sets the long name of the time zone.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.Offset">
+            <summary>
+            Gets or sets the numeric time offset.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.Default">
+            <summary>
+            Gets or sets a value indicating whether if this is the default time zone.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.Active">
+            <summary>
+            Gets or sets a value indicating whether the time zone is active.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Types.DateTimeRange">
+            <summary>
+            This class represents a date range of a start date time and end date time.
+            </summary>
+            <seealso cref="T:Talegen.Common.Models.Types.IRange`1" />
+        </member>
+        <member name="P:Talegen.Common.Models.Types.DateTimeRange.Start">
+            <summary>
+            Gets or sets the start date.
+            </summary>
+            <value>The start date.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Types.DateTimeRange.End">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>The end date.</value>
+        </member>
+        <member name="M:Talegen.Common.Models.Types.DateTimeRange.Includes(System.DateTime)">
+            <summary>
+            Includes the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Talegen.Common.Models.Types.DateTimeRange.Includes(Talegen.Common.Models.Types.IRange{System.DateTime})">
+            <summary>
+            Includes the specified range.
+            </summary>
+            <param name="range">The range.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Talegen.Common.Models.Types.IRange`1">
+            <summary>
+            This interface class is used to implement a range class.
+            </summary>
+            <typeparam name="T">Contains the type of data for the range.</typeparam>
+        </member>
+        <member name="P:Talegen.Common.Models.Types.IRange`1.Start">
+            <summary>
+            Gets or sets the start.
+            </summary>
+            <value>The start.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Types.IRange`1.End">
+            <summary>
+            Gets or sets the end.
+            </summary>
+            <value>The end.</value>
+        </member>
+        <member name="M:Talegen.Common.Models.Types.IRange`1.Includes(`0)">
+            <summary>
+            Includes the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Talegen.Common.Models.Types.IRange`1.Includes(Talegen.Common.Models.Types.IRange{`0})">
+            <summary>
+            Includes the specified range.
+            </summary>
+            <param name="range">The range.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Talegen.Common.Shared.CreatedUpdaterModelBase">
+            <summary>
+            This class contains basic created and updater properties for model records.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.CreatedDate">
+            <summary>
+            Gets or sets the record created date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.CreatedBy">
+            <summary>
+            Gets or sets the record creator model object.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.UpdatedDate">
+            <summary>
+            Gets or sets the record last updated date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.UpdatedBy">
+            <summary>
+            Gets or sets the record updater model object.
+            </summary>
+        </member>
+        <member name="T:Vasont.Publisher.Models.Common.TenantDetailModel">
+            <summary>
+            This class represents the basic tenant information needed for the web application.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.DomainKey">
+            <summary>
+            Gets or sets the domain key.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.Name">
+            <summary>
+            Gets or sets the tenant name.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.SupportInfo">
+            <summary>
+            Gets or sets the support information about the Tenant.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.SupportEmail">
+            <summary>
+            Gets or sets the support contact e-mail address for the Tenant.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.DefaultLanguage">
+            <summary>
+            Gets or sets the default language to use for the tenant application.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.SessionTimeout">
+            <summary>
+            Gets or sets the server's session timeout in minutes.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.Copyright">
+            <summary>
+            Gets or sets the copyright of the tenant application.
+            </summary>
+        </member>
+        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.Version">
+            <summary>
+            Gets or sets the version of the tenant application.
+            </summary>
+        </member>
+    </members>
+</doc>
