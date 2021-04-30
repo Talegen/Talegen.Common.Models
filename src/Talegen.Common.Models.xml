@@ -69,6 +69,11 @@
             This class represents the basic postal address for an entity.
             </summary>
         </member>
+        <member name="F:Talegen.Common.Models.Contacts.Address.formattedText">
+            <summary>
+            Contains the formatted address text.
+            </summary>
+        </member>
         <member name="P:Talegen.Common.Models.Contacts.Address.Street1">
             <summary>
             Gets or sets the primary address street.
@@ -122,6 +127,21 @@
             Gets or sets a value indicating whether this <see cref="T:Talegen.Common.Models.Contacts.Address" /> is primary.
             </summary>
             <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Talegen.Common.Models.Contacts.Address.ToStringFormatted">
+            <summary>
+            Converts to stringformatted.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Address.Formatted">
+            <summary>
+            Gets or sets the formatted.
+            </summary>
+            <value>
+            Gets or sets the Full mailing address, formatted for display or use on a mailing label.This field MAY contain multiple lines, separated by
+            newlines.Newlines can be represented either as a carriage return/line feed pair ("\r\n") or as a single line feed character("\n").
+            </value>
         </member>
         <member name="T:Talegen.Common.Models.Contacts.Contact">
             <summary>
@@ -568,6 +588,72 @@
             Gets or sets the type.
             </summary>
             <value>The type.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Extensions.ContactExtensions">
+            <summary>
+            This extensions class contains extension methods to enhance the use of the Contact models.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Extensions.ContactExtensions.JwtAddressClaimType">
+            <summary>
+            The JWT address claim type.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Extensions.ContactExtensions.ToAddress(System.Security.Claims.Claim)">
+            <summary>
+            This extension method converts a JWT address claim to a <see cref="T:Talegen.Common.Models.Contacts.Address" /> model object.
+            </summary>
+            <param name="claim">The claim containing the address information.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">Exception is thrown if <paramref name="claim" /> is null.</exception>
+        </member>
+        <member name="T:Talegen.Common.Models.Extensions.Internal.JwtAddressModel">
+            <summary>
+            This class represents a JWT address model for use in translation to a <see cref="T:Talegen.Common.Models.Contacts.Address" /> model.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Extensions.Internal.JwtAddressModel.Formatted">
+            <summary>
+            Gets or sets the formatted.
+            </summary>
+            <value>
+            Gets or sets the Full mailing address, formatted for display or use on a mailing label.This field MAY contain multiple lines, separated by
+            newlines.Newlines can be represented either as a carriage return/line feed pair ("\r\n") or as a single line feed character("\n").
+            </value>
+        </member>
+        <member name="P:Talegen.Common.Models.Extensions.Internal.JwtAddressModel.StreetAddress">
+            <summary>
+            Gets or sets the street address.
+            </summary>
+            <value>
+            Full street address component, which MAY include house number, street name, Post Office Box, and multi-line extended street address information.This
+            field MAY contain multiple lines, separated by newlines.Newlines can be represented either as a carriage return/line feed pair ("\r\n") or as a
+            single line feed character("\n").
+            </value>
+        </member>
+        <member name="P:Talegen.Common.Models.Extensions.Internal.JwtAddressModel.Locality">
+            <summary>
+            Gets or sets the locality.
+            </summary>
+            <value>The City or locality component.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Extensions.Internal.JwtAddressModel.Region">
+            <summary>
+            Gets or sets the region.
+            </summary>
+            <value>The State, province, prefecture, or region component.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Extensions.Internal.JwtAddressModel.PostalCode">
+            <summary>
+            Gets or sets the postal code.
+            </summary>
+            <value>The Zip code or postal code component.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Extensions.Internal.JwtAddressModel.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>
+            <value>The country name component.</value>
         </member>
         <member name="T:Talegen.Common.Models.Metadata.Category">
             <summary>
