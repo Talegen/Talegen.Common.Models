@@ -13,10 +13,10 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Models</PackageTags>
-    <PackageReleaseNotes>Fixed Paginated Query to use Common.Core SortDirection enumeration.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added additional modelling and extensions for address models.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.2.0</Version>
+    <Version>1.0.3.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
