@@ -36,7 +36,7 @@ namespace Talegen.Common.Models.Extensions
         /// This extension method converts a JWT address claim to a <see cref="Address" /> model object.
         /// </summary>
         /// <param name="claim">The claim containing the address information.</param>
-        /// <returns></returns>
+        /// <returns>Returns a new Address model containing found claim address details.</returns>
         /// <exception cref="ArgumentNullException">Exception is thrown if <paramref name="claim" /> is null.</exception>
         public static Address ToAddress(this Claim claim)
         {
@@ -50,23 +50,36 @@ namespace Talegen.Common.Models.Extensions
             // is a JWT address claim
             if (claim.Type == JwtAddressClaimType && !string.IsNullOrWhiteSpace(claim.Value))
             {
-                JwtAddressModel jwtModel = JsonConvert.DeserializeObject<JwtAddressModel>(claim.Value);
+                result = claim.Value.ToAddress();
+            }
 
-                if (jwtModel != null)
+            return result;
+        }
+
+        /// <summary>
+        /// This extension method converts a JWT address claim to a <see cref="Address" /> model object.
+        /// </summary>
+        /// <param name="claimValue">The claim value containing the address information.</param>
+        /// <returns>Returns a new Address model containing found claim address details.</returns>
+        public static Address ToAddress(this string claimValue)
+        {
+            Address result = null;
+            JwtAddressModel jwtModel = JsonConvert.DeserializeObject<JwtAddressModel>(claimValue);
+
+            if (jwtModel != null)
+            {
+                string[] streetLines = jwtModel.StreetAddress.Split('\n');
+
+                result = new Address
                 {
-                    string[] streetLines = jwtModel.StreetAddress.Split('\n');
-
-                    result = new Address
-                    {
-                        Street1 = streetLines != null ? streetLines[0].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
-                        Street2 = streetLines != null && streetLines.Length > 1 ? streetLines[1].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
-                        City = jwtModel.Locality,
-                        Country = jwtModel.Country,
-                        PostalCode = jwtModel.PostalCode,
-                        RegionState = jwtModel.Region,
-                        Formatted = jwtModel.Formatted
-                    };
-                }
+                    Street1 = streetLines != null ? streetLines[0].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
+                    Street2 = streetLines != null && streetLines.Length > 1 ? streetLines[1].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
+                    City = jwtModel.Locality,
+                    Country = jwtModel.Country,
+                    PostalCode = jwtModel.PostalCode,
+                    RegionState = jwtModel.Region,
+                    Formatted = jwtModel.Formatted
+                };
             }
 
             return result;
