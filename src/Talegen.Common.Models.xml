@@ -604,8 +604,22 @@
             This extension method converts a JWT address claim to a <see cref="T:Talegen.Common.Models.Contacts.Address" /> model object.
             </summary>
             <param name="claim">The claim containing the address information.</param>
-            <returns></returns>
+            <returns>Returns a new Address model containing found claim address details.</returns>
             <exception cref="T:System.ArgumentNullException">Exception is thrown if <paramref name="claim" /> is null.</exception>
+        </member>
+        <member name="M:Talegen.Common.Models.Extensions.ContactExtensions.ToAddress(System.String)">
+            <summary>
+            This extension method converts a JWT address claim to a <see cref="T:Talegen.Common.Models.Contacts.Address" /> model object.
+            </summary>
+            <param name="claimValue">The claim value containing the address information.</param>
+            <returns>Returns a new Address model containing found claim address details.</returns>
+        </member>
+        <member name="M:Talegen.Common.Models.Extensions.ContactExtensions.ToClaimFormat(Talegen.Common.Models.Contacts.Address)">
+            <summary>
+            Converts the specified Address model to JWT Address format.
+            </summary>
+            <param name="address">The address to convert.</param>
+            <returns>Returns a JWT address formatted JSON model string.</returns>
         </member>
         <member name="T:Talegen.Common.Models.Extensions.Internal.JwtAddressModel">
             <summary>

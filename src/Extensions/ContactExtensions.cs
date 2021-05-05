@@ -84,5 +84,25 @@ namespace Talegen.Common.Models.Extensions
 
             return result;
         }
+
+        /// <summary>
+        /// Converts the specified Address model to JWT Address format.
+        /// </summary>
+        /// <param name="address">The address to convert.</param>
+        /// <returns>Returns a JWT address formatted JSON model string.</returns>
+        public static string ToClaimFormat(this Address address)
+        {
+            JwtAddressModel jwtAddressModel = new JwtAddressModel
+            {
+                Country = address.Country,
+                Locality = address.City,
+                PostalCode = address.PostalCode,
+                Region = address.RegionState,
+                StreetAddress = address.Street1 + (!string.IsNullOrWhiteSpace(address.Street2) ? Environment.NewLine + address.Street2 : string.Empty),
+                Formatted = address.Formatted
+            };
+
+            return JsonConvert.SerializeObject(jwtAddressModel);
+        }
     }
 }
