@@ -13,10 +13,10 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Models</PackageTags>
-    <PackageReleaseNotes>Added additional modelling and extensions for address models.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added additional ToAddress extension method for string claim values.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.3.0</Version>
+    <Version>1.0.4.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
