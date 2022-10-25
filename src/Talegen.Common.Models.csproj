@@ -13,10 +13,10 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Models</PackageTags>
-    <PackageReleaseNotes>Added additional ToClaimFormat extension for converting an address back to a JWT JSON formatted address.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated packages and made some model changes to standardize serialization.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.5.0</Version>
+    <Version>1.0.6.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
@@ -25,9 +25,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.3" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>

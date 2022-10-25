@@ -79,5 +79,14 @@ namespace Talegen.Common.Models.Contacts
         /// </summary>
         /// <value>The type.</value>
         public PhoneTypes Type { get; set; }
+
+        /// <summary>
+        /// Convert model to string.
+        /// </summary>
+        /// <returns>Returns the model string.</returns>
+        public override string ToString()
+        {
+            return $"{this.CountryCode} {this.Number} {this.Extension}".Trim();
+        }
     }
 }

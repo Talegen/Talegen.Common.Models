@@ -417,6 +417,12 @@
             </summary>
             <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
         </member>
+        <member name="M:Talegen.Common.Models.Contacts.ContactName.ToString">
+            <summary>
+            Returns the model as a string.
+            </summary>
+            <returns>Contains the model string.</returns>
+        </member>
         <member name="T:Talegen.Common.Models.Contacts.EmailTypes">
             <summary>
             Contains an enumerated list of phone types.
@@ -588,6 +594,12 @@
             Gets or sets the type.
             </summary>
             <value>The type.</value>
+        </member>
+        <member name="M:Talegen.Common.Models.Contacts.Phone.ToString">
+            <summary>
+            Convert model to string.
+            </summary>
+            <returns>Returns the model string.</returns>
         </member>
         <member name="T:Talegen.Common.Models.Extensions.ContactExtensions">
             <summary>
