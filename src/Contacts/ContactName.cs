@@ -62,5 +62,14 @@ namespace Talegen.Common.Models.Contacts
         /// </summary>
         /// <value><c>true</c> if primary; otherwise, <c>false</c>.</value>
         public bool Primary { get; set; }
+
+        /// <summary>
+        /// Returns the model as a string.
+        /// </summary>
+        /// <returns>Contains the model string.</returns>
+        public override string ToString()
+        {
+            return this.DisplayName;
+        }
     }
 }
