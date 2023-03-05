@@ -14,35 +14,20 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Server
 {
-    using System.ComponentModel.DataAnnotations;
-
     /// <summary>
-    /// This class represents a timezone model within an application.
+    /// This class represents a supported language definition within an application.
     /// </summary>
-    /// <seealso cref="Talegen.Common.Models.Shared.MinimalTimeZoneModel" />
-    public class TimeZoneModel : MinimalTimeZoneModel
+    public class LanguageModel : MinimalLanguageModel
     {
         /// <summary>
-        /// Gets or sets the long name of the time zone.
-        /// </summary>
-        [MaxLength(300)]
-        public string LongName { get; set; }
-
-        /// <summary>
-        /// Gets or sets the numeric time offset.
-        /// </summary>
-        [Required]
-        public double Offset { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether if this is the default time zone.
+        /// Gets or sets a value indicating whether if the language is the default for identity server.
         /// </summary>
         public bool Default { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the time zone is active.
+        /// Gets or sets a value indicating whether if the language is active and available.
         /// </summary>
         public bool Active { get; set; }
     }

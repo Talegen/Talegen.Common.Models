@@ -14,20 +14,20 @@
  *
 */
 
-namespace Talegen.Common.Models.Security.Queries
+namespace Talegen.Common.Models.Server.Configuration
 {
-    using Talegen.Common.Models.Server.Queries;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
 
     /// <summary>
-    /// This class defines the administration role query filter model.
+    /// This interface defines the minimal implementation of metric settings.
     /// </summary>
-    /// <seealso cref="Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel" />
-    public class RoleQueryFilterModel : PaginatedQueryRequestModel
+    public interface IMetricSettings
     {
         /// <summary>
-        /// Gets or sets the search text.
+        /// Gets or sets a value indicating whether the application insights telemetry shall be enabled.
         /// </summary>
-        /// <value>The search text.</value>
-        public string SearchText { get; set; }
+        bool Enabled { get; set; }
     }
 }

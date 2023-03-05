@@ -14,7 +14,7 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Server
 {
     using System;
     using Talegen.Common.Core.Errors;

@@ -14,32 +14,26 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Server.Configuration
 {
-    using System.ComponentModel.DataAnnotations;
-
     /// <summary>
-    /// This class represents a minimal representation of a language within an application.
+    /// This class contains application settings for the Web API.
     /// </summary>
-    public class MinimalLanguageModel
+    public abstract class ServerSettingsBase
     {
         /// <summary>
-        /// Gets or sets the unique language locale code.
+        /// Gets or sets the cache related settings.
         /// </summary>
-        [Required]
-        [MaxLength(5)]
-        public string LanguageCode { get; set; }
+        public CacheSettings Cache { get; set; } = new CacheSettings();
 
         /// <summary>
-        /// Gets or sets the name of the language.
+        /// Gets or sets security settings.
         /// </summary>
-        [Required]
-        public string Name { get; set; }
+        public SecuritySettings Security { get; set; } = new SecuritySettings();
 
         /// <summary>
-        /// Gets or sets a value indicating whether [available locale].
+        /// Gets or sets advanced settings.
         /// </summary>
-        /// <value><c>true</c> if [available locale]; otherwise, <c>false</c>.</value>
-        public bool AvailableLocale { get; set; }
+        public AdvancedSettings Advanced { get; set; } = new AdvancedSettings();
     }
 }

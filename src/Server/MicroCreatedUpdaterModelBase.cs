@@ -14,27 +14,34 @@
  *
 */
 
-namespace Talegen.Common.Models.Security
+namespace Talegen.Common.Models.Server
 {
     using System;
-    using System.ComponentModel.DataAnnotations;
+    using Talegen.Common.Models.Security;
 
     /// <summary>
-    /// This class contains the bare minimum properties to represent a role in the interface.
+    /// This class contains basic created and updater properties for model records.
     /// </summary>
-    public class MicroRoleModel : ISubjectIdentity
+    public abstract class MicroCreatedUpdaterModelBase
     {
         /// <summary>
-        /// Gets or sets the role identifier.
+        /// Gets or sets the record created date time.
         /// </summary>
-        /// <value>The role identifier.</value>
-        public Guid Id { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the record creator model object.
         /// </summary>
-        /// <value>The name.</value>
-        [Required]
-        public string Name { get; set; }
+        public MicroUserModel CreatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the record last updated date time.
+        /// </summary>
+        public DateTime? UpdatedDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the record updater model object.
+        /// </summary>
+        public MicroUserModel UpdatedBy { get; set; }
     }
 }

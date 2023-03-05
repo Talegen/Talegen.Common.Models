@@ -22,12 +22,18 @@ namespace Talegen.Common.Models.Security
     /// <summary>
     /// This class contains the bare minimum properties to represent a user in the interface.
     /// </summary>
-    public class MicroUserModel
+    public class MicroUserModel : ISubjectIdentity
     {
         /// <summary>
         /// Gets or sets the unique identity of the user.
         /// </summary>
-        public Guid UserId { get; set; }
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user name of the user.
+        /// </summary>
+        [StringLength(100)]
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the user's e-mail address.
@@ -52,18 +58,6 @@ namespace Talegen.Common.Models.Security
         /// <summary>
         /// Gets the user full name.
         /// </summary>
-        public string FullName
-        {
-            get
-            {
-                return $"{this.FirstName} {this.LastName}".Trim();
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the user name of the user.
-        /// </summary>
-        [StringLength(100)]
-        public string UserName { get; set; }
+        public string FullName => $"{this.FirstName} {this.LastName}".Trim();
     }
 }

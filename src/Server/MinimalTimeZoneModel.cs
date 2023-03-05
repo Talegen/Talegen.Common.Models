@@ -14,23 +14,25 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Server
 {
+    using System.ComponentModel.DataAnnotations;
+
     /// <summary>
-    /// This class represents a base for displaying a name value pair combination.
+    /// This class represents a minimal set of time zone model information for an application.
     /// </summary>
-    /// <typeparam name="TDisplay">Contains the display data type.</typeparam>
-    /// <typeparam name="TValue">Contains the value data type.</typeparam>
-    public abstract class DisplayValuePair<TDisplay, TValue>
+    public class MinimalTimeZoneModel
     {
         /// <summary>
-        /// Gets or sets the pair display value.
+        /// Gets or sets the time zone identity value.
         /// </summary>
-        public TDisplay Display { get; set; }
+        [MaxLength(100)]
+        public string TimeZoneId { get; set; }
 
         /// <summary>
-        /// Gets or sets the pair value.
+        /// Gets or sets the time zone short name.
         /// </summary>
-        public TValue Value { get; set; }
+        [MaxLength(200)]
+        public string ShortName { get; set; }
     }
 }

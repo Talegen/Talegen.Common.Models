@@ -16,7 +16,7 @@
     <PackageReleaseNotes>Updated packages and made some model changes to standardize serialization.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.6.0</Version>
+    <Version>1.0.7.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
@@ -25,7 +25,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Talegen.Common.Core" Version="1.0.7" />
   </ItemGroup>
