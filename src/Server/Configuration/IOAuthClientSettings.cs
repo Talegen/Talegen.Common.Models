@@ -14,29 +14,37 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Server.Configuration
 {
+    using System;
     using System.Collections.Generic;
+    using System.Text;
 
     /// <summary>
-    /// This class is used as the Error Response Model from an application.
+    /// This interface contains the minimum implementation of server to server OAuth connection settings.
     /// </summary>
-    public class ErrorResponseModel
+    public interface IOAuthClientSettings
     {
         /// <summary>
-        /// Gets the error messages.
+        /// Gets or sets the client identifier.
         /// </summary>
-        public List<ErrorModel> Messages { get; } = new List<ErrorModel>();
+        /// <value>The client identifier.</value>
+        string ClientId { get; set; }
 
         /// <summary>
-        /// Gets or sets the failed ids.
+        /// Gets or sets the Identity API Uri.
         /// </summary>
-        public List<long> FailedIds { get; set; } = new List<long>();
+        Uri IdentityApiUri { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this instance has unhandled exception.
+        /// Gets or sets an API secret key.
         /// </summary>
-        /// <value><c>true</c> if this instance has unhandled exception; otherwise, <c>false</c>.</value>
-        public bool HasUnhandledException { get; set; }
+        string Secret { get; set; }
+
+        /// <summary>
+        /// Gets or sets the identity scopes.
+        /// </summary>
+        /// <value>The identity scopes.</value>
+        List<string> Scopes { get; set; }
     }
 }

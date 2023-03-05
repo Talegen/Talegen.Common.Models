@@ -14,7 +14,7 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared.Queries
+namespace Talegen.Common.Models.Server.Queries
 {
     using System;
     using Talegen.Common.Core.Extensions;
@@ -42,7 +42,7 @@ namespace Talegen.Common.Models.Shared.Queries
             this.Page = currentPage;
             this.Limit = maxPageSize;
             this.Sort = Array.Empty<string>();
-            this.Dir = Array.Empty<SortDirection>();
+            this.Direction = Array.Empty<SortDirection>();
         }
 
         /// <summary>
@@ -63,6 +63,6 @@ namespace Talegen.Common.Models.Shared.Queries
         /// <summary>
         /// Gets or sets the sort direction.
         /// </summary>
-        public SortDirection[] Dir { get; set; }
+        public SortDirection[] Direction { get; set; }
     }
 }

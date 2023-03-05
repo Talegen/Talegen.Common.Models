@@ -14,25 +14,27 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Server.Queries
 {
-    using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
 
     /// <summary>
-    /// This class represents a minimal set of time zone model information for an application.
+    /// This class defines the basic query result model for the paginated query.
     /// </summary>
-    public class MinimalTimeZoneModel
+    /// <typeparam name="TQueryModel">The type of the query result.</typeparam>
+    public class PaginatedQueryResultModel<TQueryModel>
+        where TQueryModel : class
     {
         /// <summary>
-        /// Gets or sets the time zone identity value.
+        /// Gets or sets the total records.
         /// </summary>
-        [MaxLength(100)]
-        public string TimeZoneId { get; set; }
+        /// <value>The total records.</value>
+        public int TotalCount { get; set; }
 
         /// <summary>
-        /// Gets or sets the time zone short name.
+        /// Gets or sets the results of the model query.
         /// </summary>
-        [MaxLength(200)]
-        public string ShortName { get; set; }
+        /// <value>The results.</value>
+        public List<TQueryModel> Results { get; set; }
     }
 }

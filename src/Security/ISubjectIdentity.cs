@@ -14,34 +14,23 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Security
 {
     using System;
-    using Talegen.Common.Models.Security;
 
     /// <summary>
-    /// This class contains basic created and updater properties for model records.
+    /// This interface implements the minimum properties for identification
     /// </summary>
-    public abstract class MicroCreatedUpdaterModelBase
+    public interface ISubjectIdentity
     {
         /// <summary>
-        /// Gets or sets the record created date time.
+        /// Gets the subject identity.
         /// </summary>
-        public DateTime CreatedDate { get; set; }
+        Guid Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the record creator model object.
+        /// Gets the subject name.
         /// </summary>
-        public MicroUserModel CreatedBy { get; set; }
-
-        /// <summary>
-        /// Gets or sets the record last updated date time.
-        /// </summary>
-        public DateTime? UpdatedDate { get; set; }
-
-        /// <summary>
-        /// Gets or sets the record updater model object.
-        /// </summary>
-        public MicroUserModel UpdatedBy { get; set; }
+        string Name { get; set; }
     }
 }

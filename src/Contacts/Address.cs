@@ -128,7 +128,7 @@ namespace Talegen.Common.Models.Contacts
         public bool Primary { get; set; }
 
         /// <summary>
-        /// Converts to stringformatted.
+        /// Converts to string formatted.
         /// </summary>
         /// <returns></returns>
         public string ToStringFormatted()

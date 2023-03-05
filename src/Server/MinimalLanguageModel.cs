@@ -14,34 +14,32 @@
  *
 */
 
-namespace Talegen.Common.Shared
+namespace Talegen.Common.Models.Server
 {
-    using System;
-    using Talegen.Common.Models.Security;
+    using System.ComponentModel.DataAnnotations;
 
     /// <summary>
-    /// This class contains basic created and updater properties for model records.
+    /// This class represents a minimal representation of a language within an application.
     /// </summary>
-    public abstract class CreatedUpdaterModelBase
+    public class MinimalLanguageModel
     {
         /// <summary>
-        /// Gets or sets the record created date time.
+        /// Gets or sets the unique language locale code.
         /// </summary>
-        public DateTime CreatedDate { get; set; }
+        [Required]
+        [MaxLength(5)]
+        public string LanguageCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the record creator model object.
+        /// Gets or sets the name of the language.
         /// </summary>
-        public MicroUserModel CreatedBy { get; set; }
+        [Required]
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the record last updated date time.
+        /// Gets or sets a value indicating whether [available locale].
         /// </summary>
-        public DateTime? UpdatedDate { get; set; }
-
-        /// <summary>
-        /// Gets or sets the record updater model object.
-        /// </summary>
-        public MicroUserModel UpdatedBy { get; set; }
+        /// <value><c>true</c> if [available locale]; otherwise, <c>false</c>.</value>
+        public bool AvailableLocale { get; set; }
     }
 }

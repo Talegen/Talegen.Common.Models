@@ -14,27 +14,29 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared.Queries
+namespace Talegen.Common.Models.Server.Configuration
 {
+    using System;
     using System.Collections.Generic;
 
     /// <summary>
-    /// This class defines the basic query result model for the paginated query.
+    /// This class represents security settings within the service.
     /// </summary>
-    /// <typeparam name="TQueryModel">The type of the query result.</typeparam>
-    public class PaginatedQueryResultModel<TQueryModel>
-        where TQueryModel : class
+    public class SecuritySettings
     {
         /// <summary>
-        /// Gets or sets the total records.
+        /// Gets or sets the authority URI.
         /// </summary>
-        /// <value>The total records.</value>
-        public int TotalCount { get; set; }
+        public Uri AuthorityUri { get; set; } = default(Uri);
 
         /// <summary>
-        /// Gets or sets the results of the model query.
+        /// Gets or sets allowed origins for CORS setup.
         /// </summary>
-        /// <value>The results.</value>
-        public List<TQueryModel> Results { get; set; }
+        public List<string> AllowedOrigins { get; set; } = new List<string>();
+
+        /// <summary>
+        /// Gets or sets the JWT time skew in minutes.
+        /// </summary>
+        public int JwtTimeSkewInMinutes { get; set; } = 60;
     }
 }

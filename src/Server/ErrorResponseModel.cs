@@ -14,26 +14,29 @@
  *
 */
 
-namespace Talegen.Common.Models.Security.Queries
+namespace Talegen.Common.Models.Server
 {
-    using Talegen.Common.Models.Server.Queries;
+    using System.Collections.Generic;
 
     /// <summary>
-    /// This class defines the administration user query filter model.
+    /// This class is used as the Error Response Model from an application.
     /// </summary>
-    /// <seealso cref="Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel" />
-    public class UserQueryFilterModel : PaginatedQueryRequestModel
+    public class ErrorResponseModel
     {
         /// <summary>
-        /// Gets or sets the search text.
+        /// Gets the error messages.
         /// </summary>
-        /// <value>The search text.</value>
-        public string SearchText { get; set; }
+        public List<ErrorModel> Messages { get; } = new List<ErrorModel>();
 
         /// <summary>
-        /// Gets or sets a value indicating whether the search filter should show only active users.
+        /// Gets or sets the failed ids.
         /// </summary>
-        /// <value><c>true</c> if only active; otherwise, <c>false</c> and return all users.</value>
-        public bool OnlyActive { get; set; } = true;
+        public List<long> FailedIds { get; set; } = new List<long>();
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance has unhandled exception.
+        /// </summary>
+        /// <value><c>true</c> if this instance has unhandled exception; otherwise, <c>false</c>.</value>
+        public bool HasUnhandledException { get; set; }
     }
 }

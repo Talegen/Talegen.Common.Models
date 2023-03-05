@@ -14,27 +14,36 @@
  *
 */
 
-namespace Talegen.Common.Models.Security
+namespace Talegen.Common.Models.Server
 {
-    using System;
     using System.ComponentModel.DataAnnotations;
 
     /// <summary>
-    /// This class contains the bare minimum properties to represent a role in the interface.
+    /// This class represents a timezone model within an application.
     /// </summary>
-    public class MicroRoleModel : ISubjectIdentity
+    /// <seealso cref="Talegen.Common.Models.Server.MinimalTimeZoneModel" />
+    public class TimeZoneModel : MinimalTimeZoneModel
     {
         /// <summary>
-        /// Gets or sets the role identifier.
+        /// Gets or sets the long name of the time zone.
         /// </summary>
-        /// <value>The role identifier.</value>
-        public Guid Id { get; set; }
+        [MaxLength(300)]
+        public string LongName { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the numeric time offset.
         /// </summary>
-        /// <value>The name.</value>
         [Required]
-        public string Name { get; set; }
+        public double Offset { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether if this is the default time zone.
+        /// </summary>
+        public bool Default { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the time zone is active.
+        /// </summary>
+        public bool Active { get; set; }
     }
 }

@@ -130,7 +130,7 @@
         </member>
         <member name="M:Talegen.Common.Models.Contacts.Address.ToStringFormatted">
             <summary>
-            Converts to stringformatted.
+            Converts to string formatted.
             </summary>
             <returns></returns>
         </member>
@@ -733,12 +733,27 @@
             </summary>
             <value>The tag.</value>
         </member>
+        <member name="T:Talegen.Common.Models.Security.ISubjectIdentity">
+            <summary>
+            This interface implements the minimum properties for identification
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.ISubjectIdentity.Id">
+            <summary>
+            Gets the subject identity.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.ISubjectIdentity.Name">
+            <summary>
+            Gets the subject name.
+            </summary>
+        </member>
         <member name="T:Talegen.Common.Models.Security.MicroRoleModel">
             <summary>
             This class contains the bare minimum properties to represent a role in the interface.
             </summary>
         </member>
-        <member name="P:Talegen.Common.Models.Security.MicroRoleModel.RoleId">
+        <member name="P:Talegen.Common.Models.Security.MicroRoleModel.Id">
             <summary>
             Gets or sets the role identifier.
             </summary>
@@ -755,9 +770,14 @@
             This class contains the bare minimum properties to represent a user in the interface.
             </summary>
         </member>
-        <member name="P:Talegen.Common.Models.Security.MicroUserModel.UserId">
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.Id">
             <summary>
             Gets or sets the unique identity of the user.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.MicroUserModel.Name">
+            <summary>
+            Gets or sets the user name of the user.
             </summary>
         </member>
         <member name="P:Talegen.Common.Models.Security.MicroUserModel.Email">
@@ -780,11 +800,6 @@
         <member name="P:Talegen.Common.Models.Security.MicroUserModel.FullName">
             <summary>
             Gets the user full name.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Security.MicroUserModel.UserName">
-            <summary>
-            Gets or sets the user name of the user.
             </summary>
         </member>
         <member name="T:Talegen.Common.Models.Security.RoleTypes">
@@ -853,7 +868,7 @@
             <summary>
             This class defines the administration role query filter model.
             </summary>
-            <seealso cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" />
+            <seealso cref="T:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel" />
         </member>
         <member name="P:Talegen.Common.Models.Security.Queries.RoleQueryFilterModel.SearchText">
             <summary>
@@ -865,7 +880,7 @@
             <summary>
             This class defines the administration user query filter model.
             </summary>
-            <seealso cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" />
+            <seealso cref="T:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel" />
         </member>
         <member name="P:Talegen.Common.Models.Security.Queries.UserQueryFilterModel.SearchText">
             <summary>
@@ -972,6 +987,572 @@
             </summary>
             <value>The claims.</value>
         </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.AdvancedSettings">
+            <summary>
+            This class represents advanced configuration settings.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.AdvancedSettings.AutoMigrate">
+            <summary>
+            Gets or sets a value indicating whether the database auto-migration logic should execute on startup.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.AdvancedSettings.MinimumCompletionPortThreads">
+            <summary>
+            Gets or sets the MinimumCompletionPortThreads count.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.AdvancedSettings.ShowDiagnostics">
+            <summary>
+            Gets or sets a value indicating whether the diagnostics page is available.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.CacheType">
+            <summary>
+            This enum contains cache type.
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Server.Configuration.CacheType.Memory">
+            <summary>
+            The value indicates that memory cache should be used
+            </summary>
+        </member>
+        <member name="F:Talegen.Common.Models.Server.Configuration.CacheType.Redis">
+            <summary>
+            The value indicates that Redis cache should be used
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.CacheSettings">
+            <summary>
+            This class represents cache settings in the server config.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Server.Configuration.CacheSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Server.Configuration.CacheSettings" /> class.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.CacheSettings.CacheType">
+            <summary>
+            Gets or sets the cache type
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.CacheSettings.SubscriptionCacheLifeMinutes">
+            <summary>
+            Gets or sets the application state time to live in minutes.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.CacheSettings.SubscriptionCacheSlidingWindow">
+            <summary>
+            Gets or sets a value indicating whether the subscription information cache is a sliding window.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.CacheSettings.UserAppInfoLifeMinutes">
+            <summary>
+            Gets or sets the user application subscription information time to live in minutes.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.CacheSettings.UserAppInfoCacheSlidingWindow">
+            <summary>
+            Gets or sets a value indicating whether the user subscription information cache is a sliding window.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.CacheSettings.NamedSeatLicenseUseLifeMinutes">
+            <summary>
+            Gets or sets the named seat license usage life in minutes.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.CacheSettings.ConcurrentSeatLicenseUseLifeMinutes">
+            <summary>
+            Gets or sets the concurrent seat license usage life in minutes.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.EmailSettings">
+            <summary>
+            This class contains e-mail server settings for use within the e-mail messaging service.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.EmailSettings.HostName">
+            <summary>
+            Gets or sets the host name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.EmailSettings.Port">
+            <summary>
+            Gets or sets the host port.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.EmailSettings.UserName">
+            <summary>
+            Gets or sets the user name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.EmailSettings.Password">
+            <summary>
+            Gets or sets the user password.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.EmailSettings.UseSsl">
+            <summary>
+            Gets or sets a value indicating whether the connection shall use SSL.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.EmailSettings.ReplyEmail">
+            <summary>
+            Gets or sets the email address to send from and reply to.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.EmailSettings.AlertNotificationEmail">
+            <summary>
+            Gets or sets the alert notification email.
+            </summary>
+            <value>The alert notification email.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.IMetricSettings">
+            <summary>
+            This interface defines the minimal implementation of metric settings.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.IMetricSettings.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the application insights telemetry shall be enabled.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.IOAuthClientSettings">
+            <summary>
+            This interface contains the minimum implementation of server to server OAuth connection settings.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.IOAuthClientSettings.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>The client identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.IOAuthClientSettings.IdentityApiUri">
+            <summary>
+            Gets or sets the Identity API Uri.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.IOAuthClientSettings.Secret">
+            <summary>
+            Gets or sets an API secret key.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.IOAuthClientSettings.Scopes">
+            <summary>
+            Gets or sets the identity scopes.
+            </summary>
+            <value>The identity scopes.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.MetricSettingsBase">
+            <summary>
+            This class contains application insight settings
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.MetricSettingsBase.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the application insights telemetry shall be enabled.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.SecuritySettings">
+            <summary>
+            This class represents security settings within the service.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SecuritySettings.AuthorityUri">
+            <summary>
+            Gets or sets the authority URI.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SecuritySettings.AllowedOrigins">
+            <summary>
+            Gets or sets allowed origins for CORS setup.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SecuritySettings.JwtTimeSkewInMinutes">
+            <summary>
+            Gets or sets the JWT time skew in minutes.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.ServerSettingsBase">
+            <summary>
+            This class contains application settings for the Web API.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.ServerSettingsBase.Cache">
+            <summary>
+            Gets or sets the cache related settings.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.ServerSettingsBase.Security">
+            <summary>
+            Gets or sets security settings.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.ServerSettingsBase.Advanced">
+            <summary>
+            Gets or sets advanced settings.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Configuration.SyncClientSettings">
+            <summary>
+            This class contains common synchronization settings for all server and API programs.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SyncClientSettings.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>The client identifier.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SyncClientSettings.IdentityApiUri">
+            <summary>
+            Gets or sets the Identity API Uri.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SyncClientSettings.Secret">
+            <summary>
+            Gets or sets an API secret key.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SyncClientSettings.Scopes">
+            <summary>
+            Gets or sets the identity scopes.
+            </summary>
+            <value>The identity scopes.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SyncClientSettings.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Talegen.Common.Models.Server.Configuration.SyncClientSettings" /> is enabled.
+            </summary>
+            <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SyncClientSettings.ApplyResourceSubDomainApiSuffix">
+            <summary>
+            Gets or sets a value indicating whether the API suffix is added to the domain key sub-domain name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Configuration.SyncClientSettings.DeveloperLogoutUriTemplate">
+            <summary>
+            Gets or sets the developer override for a logout domain with port.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.CreatedUpdaterModelBase">
+            <summary>
+            This class contains basic created and updater properties for model records.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.CreatedUpdaterModelBase.CreatedDate">
+            <summary>
+            Gets or sets the record created date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.CreatedUpdaterModelBase.CreatedBy">
+            <summary>
+            Gets or sets the record creator model object.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.CreatedUpdaterModelBase.UpdatedDate">
+            <summary>
+            Gets or sets the record last updated date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.CreatedUpdaterModelBase.UpdatedBy">
+            <summary>
+            Gets or sets the record updater model object.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.DisplayValuePair`2">
+            <summary>
+            This class represents a base for displaying a name value pair combination.
+            </summary>
+            <typeparam name="TDisplay">Contains the display data type.</typeparam>
+            <typeparam name="TValue">Contains the value data type.</typeparam>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.DisplayValuePair`2.Display">
+            <summary>
+            Gets or sets the pair display value.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.DisplayValuePair`2.Value">
+            <summary>
+            Gets or sets the pair value.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.ErrorModel">
+            <summary>
+            This class represents an error message within the <see cref="T:Talegen.Common.Models.Server.ErrorResponseModel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Server.ErrorModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Server.ErrorModel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Server.ErrorModel.#ctor(System.String,Talegen.Common.Core.Errors.ErrorType,System.DateTime,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Server.ErrorModel" /> class.
+            </summary>
+            <param name="message">Contains the error message text.</param>
+            <param name="type">Contains the error message type.</param>
+            <param name="eventDate">Contains the date time when the error was created.</param>
+            <param name="stackTrace">Contains an error stack trace message.</param>
+            <param name="propertyName">Contains the property name for validation errors.</param>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorModel.ErrorCategory">
+            <summary>
+            Gets or sets the message error type.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorModel.SuggestedErrorCode">
+            <summary>
+            Gets or sets a suggested error code.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorModel.ErrorType">
+            <summary>
+            Gets or sets the error message type.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorModel.Message">
+            <summary>
+            Gets or sets the error message text.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorModel.PropertyName">
+            <summary>
+            Gets or sets a related property name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorModel.EventDate">
+            <summary>
+            Gets or sets the date time when the error was generated.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorModel.StackTrace">
+            <summary>
+            Gets or sets the error stack trace generated if any.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.ErrorResponseModel">
+            <summary>
+            This class is used as the Error Response Model from an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorResponseModel.Messages">
+            <summary>
+            Gets the error messages.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorResponseModel.FailedIds">
+            <summary>
+            Gets or sets the failed ids.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ErrorResponseModel.HasUnhandledException">
+            <summary>
+            Gets or sets a value indicating whether this instance has unhandled exception.
+            </summary>
+            <value><c>true</c> if this instance has unhandled exception; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.LanguageModel">
+            <summary>
+            This class represents a supported language definition within an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.LanguageModel.Default">
+            <summary>
+            Gets or sets a value indicating whether if the language is the default for identity server.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.LanguageModel.Active">
+            <summary>
+            Gets or sets a value indicating whether if the language is active and available.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.MicroCreatedUpdaterModelBase">
+            <summary>
+            This class contains basic created and updater properties for model records.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MicroCreatedUpdaterModelBase.CreatedDate">
+            <summary>
+            Gets or sets the record created date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MicroCreatedUpdaterModelBase.CreatedBy">
+            <summary>
+            Gets or sets the record creator model object.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MicroCreatedUpdaterModelBase.UpdatedDate">
+            <summary>
+            Gets or sets the record last updated date time.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MicroCreatedUpdaterModelBase.UpdatedBy">
+            <summary>
+            Gets or sets the record updater model object.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.MinimalLanguageModel">
+            <summary>
+            This class represents a minimal representation of a language within an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MinimalLanguageModel.LanguageCode">
+            <summary>
+            Gets or sets the unique language locale code.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MinimalLanguageModel.Name">
+            <summary>
+            Gets or sets the name of the language.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MinimalLanguageModel.AvailableLocale">
+            <summary>
+            Gets or sets a value indicating whether [available locale].
+            </summary>
+            <value><c>true</c> if [available locale]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.MinimalTimeZoneModel">
+            <summary>
+            This class represents a minimal set of time zone model information for an application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MinimalTimeZoneModel.TimeZoneId">
+            <summary>
+            Gets or sets the time zone identity value.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.MinimalTimeZoneModel.ShortName">
+            <summary>
+            Gets or sets the time zone short name.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel">
+            <summary>
+            This class contains parameters passed to the query for filtering.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel" /> class.
+            </summary>
+            <param name="maxPageSize">Contains the maximum page size.</param>
+            <param name="currentPage">Contains an optional current page number.</param>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel.Page">
+            <summary>
+            Gets or sets current page number.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel.Limit">
+            <summary>
+            Gets or sets the result limit.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel.Sort">
+            <summary>
+            Gets or sets the name of the column to sort by.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel.Direction">
+            <summary>
+            Gets or sets the sort direction.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1">
+            <summary>
+            This class defines the basic query result model for the paginated query.
+            </summary>
+            <typeparam name="TQueryModel">The type of the query result.</typeparam>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1.TotalCount">
+            <summary>
+            Gets or sets the total records.
+            </summary>
+            <value>The total records.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1.Results">
+            <summary>
+            Gets or sets the results of the model query.
+            </summary>
+            <value>The results.</value>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.TenantDetailModel`3">
+            <summary>
+            This class represents the basic tenant information needed for the web application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TenantDetailModel`3.DomainKey">
+            <summary>
+            Gets or sets the domain key.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TenantDetailModel`3.Name">
+            <summary>
+            Gets or sets the tenant name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TenantDetailModel`3.Subscription">
+            <summary>
+            Gets or sets the subscription type.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TenantDetailModel`3.SupportInfo">
+            <summary>
+            Gets or sets the support information about the Tenant.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TenantDetailModel`3.SupportEmail">
+            <summary>
+            Gets or sets the support contact e-mail address for the Tenant.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TenantDetailModel`3.DefaultLanguage">
+            <summary>
+            Gets or sets the default language to use for the tenant application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TenantDetailModel`3.SessionTimeout">
+            <summary>
+            Gets or sets the server's session timeout in minutes.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Server.TimeZoneModel">
+            <summary>
+            This class represents a timezone model within an application.
+            </summary>
+            <seealso cref="T:Talegen.Common.Models.Server.MinimalTimeZoneModel" />
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TimeZoneModel.LongName">
+            <summary>
+            Gets or sets the long name of the time zone.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TimeZoneModel.Offset">
+            <summary>
+            Gets or sets the numeric time offset.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TimeZoneModel.Default">
+            <summary>
+            Gets or sets a value indicating whether if this is the default time zone.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.TimeZoneModel.Active">
+            <summary>
+            Gets or sets a value indicating whether the time zone is active.
+            </summary>
+        </member>
         <member name="T:Talegen.Common.Models.Shared.DeleteResultModelBase">
             <summary>
             This abstract class defines common model properties to return during a delete action within the application.
@@ -985,256 +1566,6 @@
         <member name="P:Talegen.Common.Models.Shared.DeleteResultModelBase.Successful">
             <summary>
             Gets or sets a value indicating whether the value was successful.
-            </summary>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.DisplayValuePair`2">
-            <summary>
-            This class represents a base for displaying a name value pair combination.
-            </summary>
-            <typeparam name="TDisplay">Contains the display data type.</typeparam>
-            <typeparam name="TValue">Contains the value data type.</typeparam>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.DisplayValuePair`2.Display">
-            <summary>
-            Gets or sets the pair display value.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.DisplayValuePair`2.Value">
-            <summary>
-            Gets or sets the pair value.
-            </summary>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.ErrorModel">
-            <summary>
-            This class represents an error message within the <see cref="T:Talegen.Common.Models.Shared.ErrorResponseModel" /> class.
-            </summary>
-        </member>
-        <member name="M:Talegen.Common.Models.Shared.ErrorModel.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.ErrorModel" /> class.
-            </summary>
-        </member>
-        <member name="M:Talegen.Common.Models.Shared.ErrorModel.#ctor(System.String,Talegen.Common.Core.Errors.ErrorType,System.DateTime,System.String,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.ErrorModel" /> class.
-            </summary>
-            <param name="message">Contains the error message text.</param>
-            <param name="type">Contains the error message type.</param>
-            <param name="eventDate">Contains the date time when the error was created.</param>
-            <param name="stackTrace">Contains an error stack trace message.</param>
-            <param name="propertyName">Contains the property name for validation errors.</param>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorModel.ErrorCategory">
-            <summary>
-            Gets or sets the message error type.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorModel.SuggestedErrorCode">
-            <summary>
-            Gets or sets a suggested error code.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorModel.ErrorType">
-            <summary>
-            Gets or sets the error message type.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorModel.Message">
-            <summary>
-            Gets or sets the error message text.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorModel.PropertyName">
-            <summary>
-            Gets or sets a related property name.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorModel.EventDate">
-            <summary>
-            Gets or sets the date time when the error was generated.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorModel.StackTrace">
-            <summary>
-            Gets or sets the error stack trace generated if any.
-            </summary>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.ErrorResponseModel">
-            <summary>
-            This class is used as the Error Response Model from an application.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorResponseModel.Messages">
-            <summary>
-            Gets the error messages.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorResponseModel.FailedIds">
-            <summary>
-            Gets or sets the failed ids.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.ErrorResponseModel.HasUnhandledException">
-            <summary>
-            Gets or sets a value indicating whether this instance has unhandled exception.
-            </summary>
-            <value><c>true</c> if this instance has unhandled exception; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.LanguageModel">
-            <summary>
-            This class represents a supported language definition within an application.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.LanguageModel.Default">
-            <summary>
-            Gets or sets a value indicating whether if the language is the default for identity server.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.LanguageModel.Active">
-            <summary>
-            Gets or sets a value indicating whether if the language is active and available.
-            </summary>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase">
-            <summary>
-            This class contains basic created and updater properties for model records.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.CreatedDate">
-            <summary>
-            Gets or sets the record created date time.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.CreatedBy">
-            <summary>
-            Gets or sets the record creator model object.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.UpdatedDate">
-            <summary>
-            Gets or sets the record last updated date time.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MicroCreatedUpdaterModelBase.UpdatedBy">
-            <summary>
-            Gets or sets the record updater model object.
-            </summary>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.MinimalLanguageModel">
-            <summary>
-            This class represents a minimal representation of a language within an application.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MinimalLanguageModel.LanguageCode">
-            <summary>
-            Gets or sets the unique language locale code.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MinimalLanguageModel.Name">
-            <summary>
-            Gets or sets the name of the language.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MinimalLanguageModel.AvailableLocale">
-            <summary>
-            Gets or sets a value indicating whether [available locale].
-            </summary>
-            <value><c>true</c> if [available locale]; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.MinimalTimeZoneModel">
-            <summary>
-            This class represents a minimal set of time zone model information for an application.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MinimalTimeZoneModel.TimeZoneId">
-            <summary>
-            Gets or sets the time zone identity value.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.MinimalTimeZoneModel.ShortName">
-            <summary>
-            Gets or sets the time zone short name.
-            </summary>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel">
-            <summary>
-            This class contains parameters passed to the query for filtering.
-            </summary>
-        </member>
-        <member name="M:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" /> class.
-            </summary>
-        </member>
-        <member name="M:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.#ctor(System.Int32,System.Int32)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel" /> class.
-            </summary>
-            <param name="maxPageSize">Contains the maximum page size.</param>
-            <param name="currentPage">Contains an optional current page number.</param>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Page">
-            <summary>
-            Gets or sets current page number.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Limit">
-            <summary>
-            Gets or sets the result limit.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Sort">
-            <summary>
-            Gets or sets the name of the column to sort by.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryRequestModel.Dir">
-            <summary>
-            Gets or sets the sort direction.
-            </summary>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.Queries.PaginatedQueryResultModel`1">
-            <summary>
-            This class defines the basic query result model for the paginated query.
-            </summary>
-            <typeparam name="TQueryModel">The type of the query result.</typeparam>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryResultModel`1.TotalCount">
-            <summary>
-            Gets or sets the total records.
-            </summary>
-            <value>The total records.</value>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.Queries.PaginatedQueryResultModel`1.Results">
-            <summary>
-            Gets or sets the results of the model query.
-            </summary>
-            <value>The results.</value>
-        </member>
-        <member name="T:Talegen.Common.Models.Shared.TimeZoneModel">
-            <summary>
-            This class represents a timezone model within an application.
-            </summary>
-            <seealso cref="T:Talegen.Common.Models.Shared.MinimalTimeZoneModel" />
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.LongName">
-            <summary>
-            Gets or sets the long name of the time zone.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.Offset">
-            <summary>
-            Gets or sets the numeric time offset.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.Default">
-            <summary>
-            Gets or sets a value indicating whether if this is the default time zone.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Models.Shared.TimeZoneModel.Active">
-            <summary>
-            Gets or sets a value indicating whether the time zone is active.
             </summary>
         </member>
         <member name="T:Talegen.Common.Models.Types.DateTimeRange">
@@ -1302,76 +1633,6 @@
             </summary>
             <param name="range">The range.</param>
             <returns></returns>
-        </member>
-        <member name="T:Talegen.Common.Shared.CreatedUpdaterModelBase">
-            <summary>
-            This class contains basic created and updater properties for model records.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.CreatedDate">
-            <summary>
-            Gets or sets the record created date time.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.CreatedBy">
-            <summary>
-            Gets or sets the record creator model object.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.UpdatedDate">
-            <summary>
-            Gets or sets the record last updated date time.
-            </summary>
-        </member>
-        <member name="P:Talegen.Common.Shared.CreatedUpdaterModelBase.UpdatedBy">
-            <summary>
-            Gets or sets the record updater model object.
-            </summary>
-        </member>
-        <member name="T:Vasont.Publisher.Models.Common.TenantDetailModel">
-            <summary>
-            This class represents the basic tenant information needed for the web application.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.DomainKey">
-            <summary>
-            Gets or sets the domain key.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.Name">
-            <summary>
-            Gets or sets the tenant name.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.SupportInfo">
-            <summary>
-            Gets or sets the support information about the Tenant.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.SupportEmail">
-            <summary>
-            Gets or sets the support contact e-mail address for the Tenant.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.DefaultLanguage">
-            <summary>
-            Gets or sets the default language to use for the tenant application.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.SessionTimeout">
-            <summary>
-            Gets or sets the server's session timeout in minutes.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.Copyright">
-            <summary>
-            Gets or sets the copyright of the tenant application.
-            </summary>
-        </member>
-        <member name="P:Vasont.Publisher.Models.Common.TenantDetailModel.Version">
-            <summary>
-            Gets or sets the version of the tenant application.
-            </summary>
         </member>
     </members>
 </doc>

@@ -14,20 +14,26 @@
  *
 */
 
-namespace Talegen.Common.Models.Security.Queries
+namespace Talegen.Common.Models.Server.Configuration
 {
-    using Talegen.Common.Models.Server.Queries;
-
     /// <summary>
-    /// This class defines the administration role query filter model.
+    /// This class represents advanced configuration settings.
     /// </summary>
-    /// <seealso cref="Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel" />
-    public class RoleQueryFilterModel : PaginatedQueryRequestModel
+    public class AdvancedSettings
     {
         /// <summary>
-        /// Gets or sets the search text.
+        /// Gets or sets a value indicating whether the database auto-migration logic should execute on startup.
         /// </summary>
-        /// <value>The search text.</value>
-        public string SearchText { get; set; }
+        public bool AutoMigrate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the MinimumCompletionPortThreads count.
+        /// </summary>
+        public int MinimumCompletionPortThreads { get; set; } = 200;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the diagnostics page is available.
+        /// </summary>
+        public bool ShowDiagnostics { get; set; }
     }
 }

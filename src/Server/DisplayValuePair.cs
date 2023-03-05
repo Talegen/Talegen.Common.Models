@@ -14,21 +14,23 @@
  *
 */
 
-namespace Talegen.Common.Models.Shared
+namespace Talegen.Common.Models.Server
 {
     /// <summary>
-    /// This class represents a supported language definition within an application.
+    /// This class represents a base for displaying a name value pair combination.
     /// </summary>
-    public class LanguageModel : MinimalLanguageModel
+    /// <typeparam name="TDisplay">Contains the display data type.</typeparam>
+    /// <typeparam name="TValue">Contains the value data type.</typeparam>
+    public abstract class DisplayValuePair<TDisplay, TValue>
     {
         /// <summary>
-        /// Gets or sets a value indicating whether if the language is the default for identity server.
+        /// Gets or sets the pair display value.
         /// </summary>
-        public bool Default { get; set; }
+        public TDisplay Display { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether if the language is active and available.
+        /// Gets or sets the pair value.
         /// </summary>
-        public bool Active { get; set; }
+        public TValue Value { get; set; }
     }
 }
