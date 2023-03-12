@@ -1,5 +1,5 @@
 ﻿/*
- *
+ * Talegen Configuration Server
  * (c) Copyright Talegen, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,32 +16,24 @@
 
 namespace Talegen.Common.Models.Server
 {
-    using System;
-    using Talegen.Common.Models.Security;
-
     /// <summary>
-    /// This class contains basic created and updater properties for model records.
+    /// This interface represents the minimum language model implementation.
     /// </summary>
-    public abstract class MicroCreatedUpdaterModelBase
+    public interface ILanguageModel<TLanguageCode>
     {
         /// <summary>
-        /// Gets or sets the record created date time.
+        /// Gets or sets the unique language code.
         /// </summary>
-        public DateTime CreatedDate { get; set; }
+        TLanguageCode LanguageCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the record creator model object.
+        /// Gets or sets the language display name.
         /// </summary>
-        public ISubjectIdentity? CreatedBy { get; set; }
+        string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the record last updated date time.
+        /// Gets or sets a value indicating whether the language is a default language for all locales.
         /// </summary>
-        public DateTime UpdatedDate { get; set; }
-
-        /// <summary>
-        /// Gets or sets the record updater model object.
-        /// </summary>
-        public ISubjectIdentity? UpdatedBy { get; set; }
+        bool Default { get; set; }
     }
 }
