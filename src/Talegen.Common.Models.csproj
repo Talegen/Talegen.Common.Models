@@ -16,7 +16,7 @@
     <PackageReleaseNotes>Updated packages and made some model changes to standardize serialization.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.7.0</Version>
+    <Version>1.0.8.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 

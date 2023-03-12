@@ -19,7 +19,7 @@ namespace Talegen.Common.Models.Server
     /// <summary>
     /// This class represents a supported language definition within an application.
     /// </summary>
-    public class LanguageModel : MinimalLanguageModel
+    public class LanguageModel : MinimalLanguageModel, ILanguageModel<string>
     {
         /// <summary>
         /// Gets or sets a value indicating whether if the language is the default for identity server.

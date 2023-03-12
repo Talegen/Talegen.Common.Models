@@ -1356,6 +1356,26 @@
             </summary>
             <value><c>true</c> if this instance has unhandled exception; otherwise, <c>false</c>.</value>
         </member>
+        <member name="T:Talegen.Common.Models.Server.ILanguageModel`1">
+            <summary>
+            This interface represents the minimum language model implementation.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ILanguageModel`1.LanguageCode">
+            <summary>
+            Gets or sets the unique language code.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ILanguageModel`1.Name">
+            <summary>
+            Gets or sets the language display name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.ILanguageModel`1.Default">
+            <summary>
+            Gets or sets a value indicating whether the language is a default language for all locales.
+            </summary>
+        </member>
         <member name="T:Talegen.Common.Models.Server.LanguageModel">
             <summary>
             This class represents a supported language definition within an application.
