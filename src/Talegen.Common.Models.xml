@@ -1495,11 +1495,27 @@
             </summary>
             <typeparam name="TQueryModel">The type of the query result.</typeparam>
         </member>
+        <member name="M:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1.#ctor(Talegen.Common.Models.Server.Queries.PaginatedQueryRequestModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1" /> class.
+            </summary>
+            <param name="request">Contains the originating request model to populate query result properties.</param>
+        </member>
         <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1.TotalCount">
             <summary>
             Gets or sets the total records.
             </summary>
             <value>The total records.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1.TotalPages">
+            <summary>
+            Gets the total pages.
+            </summary>
         </member>
         <member name="P:Talegen.Common.Models.Server.Queries.PaginatedQueryResultModel`1.Results">
             <summary>

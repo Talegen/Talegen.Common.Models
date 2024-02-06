@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <Copyright>Copyright (c) Talegen, LLC. All rights reserved.</Copyright>
     <Authors>Talegen, LLC</Authors>
@@ -16,9 +16,10 @@
     <PackageReleaseNotes>Updated packages and made minor changes to pagination results model to support query info and long total count.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.10.0</Version>
+    <Version>1.0.11.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <Nullable>enable</Nullable>
+    <Title>Talegen.Common.Models</Title>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
