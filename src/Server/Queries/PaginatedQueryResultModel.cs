@@ -22,19 +22,43 @@ namespace Talegen.Common.Models.Server.Queries
     /// This class defines the basic query result model for the paginated query.
     /// </summary>
     /// <typeparam name="TQueryModel">The type of the query result.</typeparam>
-    public class PaginatedQueryResultModel<TQueryModel>
+    public class PaginatedQueryResultModel<TQueryModel> : PaginatedQueryRequestModel
         where TQueryModel : class
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaginatedQueryResultModel{TQueryModel}" /> class.
+        /// </summary>
+        public PaginatedQueryResultModel()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaginatedQueryResultModel{TQueryModel}" /> class.
+        /// </summary>
+        /// <param name="request">Contains the originating request model to populate query result properties.</param>
+        public PaginatedQueryResultModel(PaginatedQueryRequestModel request)
+            : base(request.Limit, request.Page)
+        {
+            this.Sort = request.Sort;
+            this.Direction = request.Direction;
+        }
+
         /// <summary>
         /// Gets or sets the total records.
         /// </summary>
         /// <value>The total records.</value>
-        public int TotalCount { get; set; }
+        public long TotalCount { get; set; }
+
+        /// <summary>
+        /// Gets the total pages.
+        /// </summary>
+        public int TotalPages => this.Limit > 0 ? (int)System.Math.Ceiling((double)this.TotalCount / this.Limit) : 0;
 
         /// <summary>
         /// Gets or sets the results of the model query.
         /// </summary>
         /// <value>The results.</value>
-        public List<TQueryModel> Results { get; set; }
+        public List<TQueryModel>? Results { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -13,10 +13,10 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Models</PackageTags>
-    <PackageReleaseNotes>Updated packages and made some model changes to standardize serialization.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated packages and made minor changes to pagination results model to support query info and long total count.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.9.0</Version>
+    <Version>1.0.10.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -28,7 +28,7 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.7" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.0.12" />
   </ItemGroup>
 
   <ItemGroup>
