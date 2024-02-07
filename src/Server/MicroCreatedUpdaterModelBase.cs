@@ -32,7 +32,7 @@ namespace Talegen.Common.Models.Server
         /// <summary>
         /// Gets or sets the record creator model object.
         /// </summary>
-        public ISubjectIdentity? CreatedBy { get; set; }
+        public ISubjectIdentity<Guid>? CreatedBy { get; set; }
 
         /// <summary>
         /// Gets or sets the record last updated date time.
@@ -42,6 +42,6 @@ namespace Talegen.Common.Models.Server
         /// <summary>
         /// Gets or sets the record updater model object.
         /// </summary>
-        public ISubjectIdentity? UpdatedBy { get; set; }
+        public ISubjectIdentity<Guid>? UpdatedBy { get; set; }
     }
 }

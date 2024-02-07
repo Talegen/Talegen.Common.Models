@@ -44,7 +44,7 @@ namespace Talegen.Common.Models.Security
         /// <summary>
         /// Gets or sets the role description.
         /// </summary>
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// Gets or sets the type of the role.

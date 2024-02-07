@@ -21,15 +21,15 @@ namespace Talegen.Common.Models.Security
     /// <summary>
     /// This interface implements the minimum properties for identification
     /// </summary>
-    public interface ISubjectIdentity
+    public interface ISubjectIdentity<TKey> 
     {
         /// <summary>
-        /// Gets the subject identity.
+        /// Gets or sets the unique identity of the subject.
         /// </summary>
-        Guid Id { get; set; }
+        TKey Id { get; set; }
 
         /// <summary>
-        /// Gets the subject name.
+        /// Gets or sets the name of the subject.
         /// </summary>
         string Name { get; set; }
     }

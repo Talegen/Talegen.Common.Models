@@ -32,7 +32,7 @@ namespace Talegen.Common.Models.Security
         /// <summary>
         /// Gets or sets the user model for the creator user.
         /// </summary>
-        public MinimalUserModel CreatedBy { get; set; }
+        public MinimalUserModel? CreatedBy { get; set; }
 
         /// <summary>
         /// Gets or sets the date time when the account was last updated.
@@ -42,12 +42,12 @@ namespace Talegen.Common.Models.Security
         /// <summary>
         /// Gets or sets the user model for the updating user.
         /// </summary>
-        public MinimalUserModel UpdatedBy { get; set; }
+        public MinimalUserModel? UpdatedBy { get; set; }
 
         /// <summary>
         /// Gets or sets the user notes.
         /// </summary>
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the user account is active.
