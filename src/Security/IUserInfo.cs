@@ -1,7 +1,7 @@
 ﻿/*
  *
  * (c) Copyright Talegen, LLC.
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -16,32 +16,30 @@
 
 namespace Talegen.Common.Models.Security
 {
-    using System;
-
     /// <summary>
-    /// This class represents a user that is assigned to a role. It is a stripped down version of the user and returns only essential information related to the
-    /// user for role associations.
+    /// This interface defines the minimum implementation of a user information object.
     /// </summary>
-    public class MinimalUserModel : MicroUserModel
+    /// <typeparam name="TKey">Contains the type of the user identifier.</typeparam>
+    public interface IUserInfo<TKey> : ISubjectIdentity<TKey>
     {
         /// <summary>
-        /// Gets or sets the user's desired language.
+        /// Gets or sets the user email address.
         /// </summary>
-        public string? Locale { get; set; }
+        string Email { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the user first name.
+        /// </summary>
+        string FirstName { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the user last name.
+        /// </summary>
+        string LastName { get; set; }
 
         /// <summary>
-        /// Gets or sets the user's time zone.
+        /// Gets the full name of the user.
         /// </summary>
-        public string? TimeZone { get; set; }
-
-        /// <summary>
-        /// Gets a value indicating whether the user is locked.
-        /// </summary>
-        public bool Locked => this.LockExpirationDate.HasValue;
-
-        /// <summary>
-        /// Gets or sets the lock expiration date.
-        /// </summary>
-        public DateTime? LockExpirationDate { get; set; }
+        string FullName { get; }
     }
 }

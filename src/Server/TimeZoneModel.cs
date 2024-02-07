@@ -19,7 +19,7 @@ namespace Talegen.Common.Models.Server
     using System.ComponentModel.DataAnnotations;
 
     /// <summary>
-    /// This class represents a timezone model within an application.
+    /// This class represents a time zone model within an application.
     /// </summary>
     /// <seealso cref="Talegen.Common.Models.Server.MinimalTimeZoneModel" />
     public class TimeZoneModel : MinimalTimeZoneModel
@@ -28,7 +28,7 @@ namespace Talegen.Common.Models.Server
         /// Gets or sets the long name of the time zone.
         /// </summary>
         [MaxLength(300)]
-        public string LongName { get; set; }
+        public string? LongName { get; set; }
 
         /// <summary>
         /// Gets or sets the numeric time offset.

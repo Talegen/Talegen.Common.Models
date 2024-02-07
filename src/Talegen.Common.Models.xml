@@ -733,19 +733,45 @@
             </summary>
             <value>The tag.</value>
         </member>
-        <member name="T:Talegen.Common.Models.Security.ISubjectIdentity">
+        <member name="T:Talegen.Common.Models.Security.ISubjectIdentity`1">
             <summary>
             This interface implements the minimum properties for identification
             </summary>
         </member>
-        <member name="P:Talegen.Common.Models.Security.ISubjectIdentity.Id">
+        <member name="P:Talegen.Common.Models.Security.ISubjectIdentity`1.Id">
             <summary>
-            Gets the subject identity.
+            Gets or sets the unique identity of the subject.
             </summary>
         </member>
-        <member name="P:Talegen.Common.Models.Security.ISubjectIdentity.Name">
+        <member name="P:Talegen.Common.Models.Security.ISubjectIdentity`1.Name">
             <summary>
-            Gets the subject name.
+            Gets or sets the name of the subject.
+            </summary>
+        </member>
+        <member name="T:Talegen.Common.Models.Security.IUserInfo`1">
+            <summary>
+            This interface defines the minimum implementation of a user information object.
+            </summary>
+            <typeparam name="TKey">Contains the type of the user identifier.</typeparam>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.IUserInfo`1.Email">
+            <summary>
+            Gets or sets the user email address.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.IUserInfo`1.FirstName">
+            <summary>
+            Gets or sets the user first name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.IUserInfo`1.LastName">
+            <summary>
+            Gets or sets the user last name.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Security.IUserInfo`1.FullName">
+            <summary>
+            Gets the full name of the user.
             </summary>
         </member>
         <member name="T:Talegen.Common.Models.Security.MicroRoleModel">
@@ -1565,7 +1591,7 @@
         </member>
         <member name="T:Talegen.Common.Models.Server.TimeZoneModel">
             <summary>
-            This class represents a timezone model within an application.
+            This class represents a time zone model within an application.
             </summary>
             <seealso cref="T:Talegen.Common.Models.Server.MinimalTimeZoneModel" />
         </member>

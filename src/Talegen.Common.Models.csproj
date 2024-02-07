@@ -16,7 +16,7 @@
     <PackageReleaseNotes>Updated packages and made minor changes to pagination results model to support query info and long total count.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.11.0</Version>
+    <Version>1.0.12.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <Nullable>enable</Nullable>
     <Title>Talegen.Common.Models</Title>

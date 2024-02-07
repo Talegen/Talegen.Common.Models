@@ -22,7 +22,7 @@ namespace Talegen.Common.Models.Security
     /// <summary>
     /// This class contains the bare minimum properties to represent a role in the interface.
     /// </summary>
-    public class MicroRoleModel : ISubjectIdentity
+    public class MicroRoleModel : ISubjectIdentity<Guid>
     {
         /// <summary>
         /// Gets or sets the role identifier.
@@ -35,6 +35,6 @@ namespace Talegen.Common.Models.Security
         /// </summary>
         /// <value>The name.</value>
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }
