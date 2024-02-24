@@ -69,11 +69,6 @@
             This class represents the basic postal address for an entity.
             </summary>
         </member>
-        <member name="F:Talegen.Common.Models.Contacts.Address.formattedText">
-            <summary>
-            Contains the formatted address text.
-            </summary>
-        </member>
         <member name="P:Talegen.Common.Models.Contacts.Address.Street1">
             <summary>
             Gets or sets the primary address street.
@@ -139,7 +134,7 @@
             Gets or sets the formatted.
             </summary>
             <value>
-            Gets or sets the Full mailing address, formatted for display or use on a mailing label.This field MAY contain multiple lines, separated by
+            Gets the Full mailing address, formatted for display or use on a mailing label.This field MAY contain multiple lines, separated by
             newlines.Newlines can be represented either as a carriage return/line feed pair ("\r\n") or as a single line feed character("\n").
             </value>
         </member>

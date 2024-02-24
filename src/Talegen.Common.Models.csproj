@@ -13,10 +13,10 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Models</PackageTags>
-    <PackageReleaseNotes>Updated packages and made minor changes to pagination results model to support query info and long total count.</PackageReleaseNotes>
+    <PackageReleaseNotes>Removed setter for address formatted property.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.12.0</Version>
+    <Version>1.0.13.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <Nullable>enable</Nullable>
     <Title>Talegen.Common.Models</Title>

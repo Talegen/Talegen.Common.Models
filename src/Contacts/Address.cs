@@ -69,11 +69,6 @@ namespace Talegen.Common.Models.Contacts
     public class Address
     {
         /// <summary>
-        /// Contains the formatted address text.
-        /// </summary>
-        private string formattedText;
-
-        /// <summary>
         /// Gets or sets the primary address street.
         /// </summary>
         /// <value>The primary address street.</value>
@@ -133,67 +128,54 @@ namespace Talegen.Common.Models.Contacts
         /// <returns></returns>
         public string ToStringFormatted()
         {
-            if (string.IsNullOrWhiteSpace(this.formattedText))
+            string formatted = string.Empty;
+
+            // build formatted text out
+            if (!string.IsNullOrWhiteSpace(this.Street1))
             {
-                // build formatted text out
-                if (!string.IsNullOrWhiteSpace(this.Street1))
-                {
-                    this.formattedText = this.Street1 + Environment.NewLine;
-                }
-
-                if (!string.IsNullOrWhiteSpace(this.Street2))
-                {
-                    this.formattedText += this.Street2 + Environment.NewLine;
-                }
-
-                string localityRegionPostal = string.Empty;
-
-                if (!string.IsNullOrWhiteSpace(this.City))
-                {
-                    localityRegionPostal = this.City;
-                }
-
-                if (!string.IsNullOrWhiteSpace(this.RegionState))
-                {
-                    localityRegionPostal += ", " + this.RegionState;
-                }
-
-                if (!string.IsNullOrWhiteSpace(this.PostalCode))
-                {
-                    localityRegionPostal += " " + this.PostalCode;
-                }
-
-                this.formattedText += localityRegionPostal + Environment.NewLine;
-
-                if (!string.IsNullOrWhiteSpace(this.Country))
-                {
-                    this.formattedText += this.Country + Environment.NewLine;
-                }
+                formatted = this.Street1 + Environment.NewLine;
             }
 
-            return this.formattedText;
+            if (!string.IsNullOrWhiteSpace(this.Street2))
+            {
+                formatted += this.Street2 + Environment.NewLine;
+            }
+
+            string localityRegionPostal = string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(this.City))
+            {
+                localityRegionPostal = this.City;
+            }
+
+            if (!string.IsNullOrWhiteSpace(this.RegionState))
+            {
+                localityRegionPostal += ", " + this.RegionState;
+            }
+
+            if (!string.IsNullOrWhiteSpace(this.PostalCode))
+            {
+                localityRegionPostal += " " + this.PostalCode;
+            }
+
+            formatted += localityRegionPostal + Environment.NewLine;
+
+            if (!string.IsNullOrWhiteSpace(this.Country))
+            {
+                formatted += this.Country + Environment.NewLine;
+            }
+            
+            return formatted;
         }
 
         /// <summary>
         /// Gets or sets the formatted.
         /// </summary>
         /// <value>
-        /// Gets or sets the Full mailing address, formatted for display or use on a mailing label.This field MAY contain multiple lines, separated by
+        /// Gets the Full mailing address, formatted for display or use on a mailing label.This field MAY contain multiple lines, separated by
         /// newlines.Newlines can be represented either as a carriage return/line feed pair ("\r\n") or as a single line feed character("\n").
         /// </value>
-        public string Formatted
-        {
-            get
-            {
-                this.formattedText = this.ToStringFormatted();
-                return this.formattedText;
-            }
-
-            set
-            {
-                // set the formatted text.
-                this.formattedText = value;
-            }
-        }
+        [JsonIgnore]
+        public string Formatted => this.ToStringFormatted();
     }
 }

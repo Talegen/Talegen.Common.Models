@@ -77,8 +77,7 @@ namespace Talegen.Common.Models.Extensions
                     City = jwtModel.Locality,
                     Country = jwtModel.Country,
                     PostalCode = jwtModel.PostalCode,
-                    RegionState = jwtModel.Region,
-                    Formatted = jwtModel.Formatted
+                    RegionState = jwtModel.Region
                 };
             }
 
