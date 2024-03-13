@@ -17,6 +17,7 @@
 namespace Talegen.Common.Models.Contacts
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -72,37 +73,37 @@ namespace Talegen.Common.Models.Contacts
         /// Gets or sets the primary address street.
         /// </summary>
         /// <value>The primary address street.</value>
-        public string Street1 { get; set; }
+        public string? Street1 { get; set; }
 
         /// <summary>
         /// Gets or sets the secondary address street.
         /// </summary>
         /// <value>The secondary address street.</value>
-        public string Street2 { get; set; }
+        public string? Street2 { get; set; }
 
         /// <summary>
         /// Gets or sets the address city.
         /// </summary>
         /// <value>The address city.</value>
-        public string City { get; set; }
+        public string? City { get; set; }
 
         /// <summary>
         /// Gets or sets the address state/region.
         /// </summary>
         /// <value>The state of the address state/region.</value>
-        public string RegionState { get; set; }
+        public string? RegionState { get; set; }
 
         /// <summary>
         /// Gets or sets the address postal/zip code.
         /// </summary>
         /// <value>The state of the address postal/zip code.</value>
-        public string PostalCode { get; set; }
+        public string? PostalCode { get; set; }
 
         /// <summary>
         /// Gets or sets the address country.
         /// </summary>
         /// <value>The address country.</value>
-        public string Country { get; set; }
+        public string? Country { get; set; }
 
         /// <summary>
         /// Gets or sets the type.

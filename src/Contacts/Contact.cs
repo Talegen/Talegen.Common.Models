@@ -58,25 +58,25 @@ namespace Talegen.Common.Models.Contacts
         /// Gets or sets the job title.
         /// </summary>
         /// <value>The job title.</value>
-        public string JobTitle { get; set; }
+        public string? JobTitle { get; set; }
 
         /// <summary>
         /// Gets or sets the website.
         /// </summary>
         /// <value>The website.</value>
-        public string Website { get; set; }
+        public string? Website { get; set; }
 
         /// <summary>
         /// Gets or sets the instant messenger.
         /// </summary>
         /// <value>The instant messenger.</value>
-        public string IM { get; set; }
+        public string? IM { get; set; }
 
         /// <summary>
         /// Gets or sets the notes.
         /// </summary>
         /// <value>The notes.</value>
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="Contact" /> is primary.

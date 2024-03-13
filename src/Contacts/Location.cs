@@ -22,8 +22,8 @@ namespace Talegen.Common.Models.Contacts
     /// This class represents an address location with associated geographical information and identity.
     /// </summary>
     /// <seealso cref="Talegen.Common.Models.Contacts.Address" />
-    /// <seealso cref="Talegen.Common.Models.Contacts.IGeography" />
-    public class Location : Address, IGeography
+    /// <seealso cref="Talegen.Common.Models.Contacts.ICoordinate" />
+    public class Location : Address, ICoordinate
     {
         /// <summary>
         /// Gets or sets the identifier.
@@ -35,12 +35,12 @@ namespace Talegen.Common.Models.Contacts
         /// Gets or sets the latitude.
         /// </summary>
         /// <value>The latitude.</value>
-        public decimal Latitude { get; set; }
+        public double Latitude { get; set; }
 
         /// <summary>
         /// Gets or sets the longitude.
         /// </summary>
         /// <value>The longitude.</value>
-        public decimal Longitude { get; set; }
+        public double Longitude { get; set; }
     }
 }

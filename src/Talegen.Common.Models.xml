@@ -418,6 +418,23 @@
             </summary>
             <returns>Contains the model string.</returns>
         </member>
+        <member name="T:Talegen.Common.Models.Contacts.Coordinate">
+            <summary>
+            This class represents the bare minimum of a geographic location.
+            </summary>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Coordinate.Latitude">
+            <summary>
+            Gets or sets the latitude.
+            </summary>
+            <value>The latitude.</value>
+        </member>
+        <member name="P:Talegen.Common.Models.Contacts.Coordinate.Longitude">
+            <summary>
+            Gets or sets the longitude.
+            </summary>
+            <value>The longitude.</value>
+        </member>
         <member name="T:Talegen.Common.Models.Contacts.EmailTypes">
             <summary>
             Contains an enumerated list of phone types.
@@ -472,35 +489,24 @@
             </summary>
             <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
         </member>
-        <member name="T:Talegen.Common.Models.Contacts.Geography">
+        <member name="M:Talegen.Common.Models.Contacts.Email.IsValid">
             <summary>
-            This class represents the bare minimum of a geographic location.
+            This method is used to determine if the e-mail address is valid.
             </summary>
+            <returns>Returns a value indicating whether the address is valid.</returns>
         </member>
-        <member name="P:Talegen.Common.Models.Contacts.Geography.Latitude">
-            <summary>
-            Gets or sets the latitude.
-            </summary>
-            <value>The latitude.</value>
-        </member>
-        <member name="P:Talegen.Common.Models.Contacts.Geography.Longitude">
-            <summary>
-            Gets or sets the longitude.
-            </summary>
-            <value>The longitude.</value>
-        </member>
-        <member name="T:Talegen.Common.Models.Contacts.IGeography">
+        <member name="T:Talegen.Common.Models.Contacts.ICoordinate">
             <summary>
             This interface defines the minimum implementation of a geographic location class.
             </summary>
         </member>
-        <member name="P:Talegen.Common.Models.Contacts.IGeography.Latitude">
+        <member name="P:Talegen.Common.Models.Contacts.ICoordinate.Latitude">
             <summary>
             Gets or sets the latitude.
             </summary>
             <value>The latitude.</value>
         </member>
-        <member name="P:Talegen.Common.Models.Contacts.IGeography.Longitude">
+        <member name="P:Talegen.Common.Models.Contacts.ICoordinate.Longitude">
             <summary>
             Gets or sets the longitude.
             </summary>
@@ -511,7 +517,7 @@
             This class represents an address location with associated geographical information and identity.
             </summary>
             <seealso cref="T:Talegen.Common.Models.Contacts.Address" />
-            <seealso cref="T:Talegen.Common.Models.Contacts.IGeography" />
+            <seealso cref="T:Talegen.Common.Models.Contacts.ICoordinate" />
         </member>
         <member name="P:Talegen.Common.Models.Contacts.Location.Id">
             <summary>
@@ -595,6 +601,12 @@
             Convert model to string.
             </summary>
             <returns>Returns the model string.</returns>
+        </member>
+        <member name="M:Talegen.Common.Models.Contacts.Phone.IsValid">
+            <summary>
+            This method is used to determine if the phone number is valid.
+            </summary>
+            <returns>Returns a value indicating whether the phone number property is a valid phone number.</returns>
         </member>
         <member name="T:Talegen.Common.Models.Extensions.ContactExtensions">
             <summary>

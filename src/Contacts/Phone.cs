@@ -16,6 +16,7 @@
 
 namespace Talegen.Common.Models.Contacts
 {
+    using System.ComponentModel.DataAnnotations;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -60,19 +61,20 @@ namespace Talegen.Common.Models.Contacts
         /// Gets or sets the country code.
         /// </summary>
         /// <value>The country code.</value>
-        public string CountryCode { get; set; }
+        public string? CountryCode { get; set; }
 
         /// <summary>
         /// Gets or sets the number.
         /// </summary>
         /// <value>The number.</value>
+        [Phone]
         public string Number { get; set; }
 
         /// <summary>
         /// Gets or sets the extension.
         /// </summary>
         /// <value>The extension.</value>
-        public string Extension { get; set; }
+        public string? Extension { get; set; }
 
         /// <summary>
         /// Gets or sets the type.
@@ -87,6 +89,16 @@ namespace Talegen.Common.Models.Contacts
         public override string ToString()
         {
             return $"{this.CountryCode} {this.Number} {this.Extension}".Trim();
+        }
+
+        /// <summary>
+        /// This method is used to determine if the phone number is valid.
+        /// </summary>
+        /// <returns>Returns a value indicating whether the phone number property is a valid phone number.</returns>
+        public bool IsValid()
+        {
+            PhoneAttribute phoneAttribute = new PhoneAttribute();
+            return !string.IsNullOrWhiteSpace(this.Number) && phoneAttribute.IsValid(this.Number); ;
         }
     }
 }

@@ -17,20 +17,20 @@
 namespace Talegen.Common.Models.Contacts
 {
     /// <summary>
-    /// This interface defines the minimum implementation of a geographic location class.
+    /// This class represents the bare minimum of a geographic location.
     /// </summary>
-    public interface IGeography
+    public class Coordinate : ICoordinate
     {
         /// <summary>
         /// Gets or sets the latitude.
         /// </summary>
         /// <value>The latitude.</value>
-        decimal Latitude { get; set; }
+        public double Latitude { get; set; }
 
         /// <summary>
         /// Gets or sets the longitude.
         /// </summary>
         /// <value>The longitude.</value>
-        decimal Longitude { get; set; }
+        public double Longitude { get; set; }
     }
 }

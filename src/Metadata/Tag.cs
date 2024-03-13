@@ -17,8 +17,6 @@
 namespace Talegen.Common.Models.Metadata
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// This class represents a tag

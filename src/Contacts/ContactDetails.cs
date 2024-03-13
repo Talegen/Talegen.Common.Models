@@ -18,7 +18,6 @@ namespace Talegen.Common.Models.Contacts
 {
     using System;
     using System.Collections.Generic;
-    using System.Text;
     using Talegen.Common.Models.Metadata;
 
     /// <summary>
@@ -57,49 +56,49 @@ namespace Talegen.Common.Models.Contacts
         /// Gets or sets the customer identifier.
         /// </summary>
         /// <value>The customer identifier.</value>
-        public string CustomerId { get; set; }
+        public string? CustomerId { get; set; }
 
         /// <summary>
         /// Gets or sets the nickname.
         /// </summary>
         /// <value>The nickname.</value>
-        public string Nickname { get; set; }
+        public string? Nickname { get; set; }
 
         /// <summary>
         /// Gets or sets the office.
         /// </summary>
         /// <value>The office.</value>
-        public string Office { get; set; }
+        public string? Office { get; set; }
 
         /// <summary>
         /// Gets or sets the profession.
         /// </summary>
         /// <value>The profession.</value>
-        public string Profession { get; set; }
+        public string? Profession { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the manager.
         /// </summary>
         /// <value>The name of the manager.</value>
-        public string ManagerName { get; set; }
+        public string? ManagerName { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the assistant.
         /// </summary>
         /// <value>The name of the assistant.</value>
-        public string AssistantName { get; set; }
+        public string? AssistantName { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the spouse partner.
         /// </summary>
         /// <value>The name of the spouse partner.</value>
-        public string SpousePartnerName { get; set; }
+        public string? SpousePartnerName { get; set; }
 
         /// <summary>
         /// Gets or sets the children.
         /// </summary>
         /// <value>The children.</value>
-        public string Children { get; set; }
+        public string? Children { get; set; }
 
         /// <summary>
         /// Gets or sets the birthday.

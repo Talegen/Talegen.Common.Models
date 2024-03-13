@@ -64,21 +64,25 @@ namespace Talegen.Common.Models.Extensions
         public static Address ToAddress(this string claimValue)
         {
             Address result = null;
-            JwtAddressModel jwtModel = JsonConvert.DeserializeObject<JwtAddressModel>(claimValue);
 
-            if (jwtModel != null)
+            if (!string.IsNullOrWhiteSpace(claimValue))
             {
-                string[] streetLines = jwtModel.StreetAddress.Split('\n');
+                JwtAddressModel jwtModel = JsonConvert.DeserializeObject<JwtAddressModel>(claimValue);
 
-                result = new Address
+                if (jwtModel != null)
                 {
-                    Street1 = streetLines != null ? streetLines[0].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
-                    Street2 = streetLines != null && streetLines.Length > 1 ? streetLines[1].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
-                    City = jwtModel.Locality,
-                    Country = jwtModel.Country,
-                    PostalCode = jwtModel.PostalCode,
-                    RegionState = jwtModel.Region
-                };
+                    string[] streetLines = jwtModel.StreetAddress.Split('\n');
+
+                    result = new Address
+                    {
+                        Street1 = streetLines != null ? streetLines[0].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
+                        Street2 = streetLines != null && streetLines.Length > 1 ? streetLines[1].Replace("\r", string.Empty).Replace("\n", string.Empty) : string.Empty,
+                        City = jwtModel.Locality,
+                        Country = jwtModel.Country,
+                        PostalCode = jwtModel.PostalCode,
+                        RegionState = jwtModel.Region
+                    };
+                }
             }
 
             return result;
@@ -89,19 +93,26 @@ namespace Talegen.Common.Models.Extensions
         /// </summary>
         /// <param name="address">The address to convert.</param>
         /// <returns>Returns a JWT address formatted JSON model string.</returns>
-        public static string ToClaimFormat(this Address address)
+        public static string? ToClaimFormat(this Address address)
         {
-            JwtAddressModel jwtAddressModel = new JwtAddressModel
-            {
-                Country = address.Country,
-                Locality = address.City,
-                PostalCode = address.PostalCode,
-                Region = address.RegionState,
-                StreetAddress = address.Street1 + (!string.IsNullOrWhiteSpace(address.Street2) ? Environment.NewLine + address.Street2 : string.Empty),
-                Formatted = address.Formatted
-            };
+            string? result = null;
 
-            return JsonConvert.SerializeObject(jwtAddressModel);
+            if (address != null)
+            {
+                JwtAddressModel jwtAddressModel = new JwtAddressModel
+                {
+                    Country = address.Country,
+                    Locality = address.City,
+                    PostalCode = address.PostalCode,
+                    Region = address.RegionState,
+                    StreetAddress = address.Street1 + (!string.IsNullOrWhiteSpace(address.Street2) ? Environment.NewLine + address.Street2 : string.Empty),
+                    Formatted = address.Formatted
+                };
+
+                result = JsonConvert.SerializeObject(jwtAddressModel); 
+            }
+            
+            return result;
         }
     }
 }

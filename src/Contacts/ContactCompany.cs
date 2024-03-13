@@ -34,25 +34,25 @@ namespace Talegen.Common.Models.Contacts
         /// Gets or sets the name.
         /// </summary>
         /// <value>The name.</value>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// Gets or sets the website.
         /// </summary>
         /// <value>The website.</value>
-        public string Website { get; set; }
+        public string? Website { get; set; }
 
         /// <summary>
         /// Gets or sets the phone.
         /// </summary>
         /// <value>The phone.</value>
-        public Phone Phone { get; set; }
+        public Phone? Phone { get; set; }
 
         /// <summary>
         /// Gets or sets the email.
         /// </summary>
         /// <value>The email.</value>
-        public Email Email { get; set; }
+        public Email? Email { get; set; }
 
         /// <summary>
         /// Gets or sets the location.

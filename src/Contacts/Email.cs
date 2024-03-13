@@ -16,6 +16,7 @@
 
 namespace Talegen.Common.Models.Contacts
 {
+    using System.ComponentModel.DataAnnotations;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -61,6 +62,7 @@ namespace Talegen.Common.Models.Contacts
         /// Gets or sets the email address.
         /// </summary>
         /// <value>The email address.</value>
+        [EmailAddress]
         public string Address { get; set; }
 
         /// <summary>
@@ -86,6 +88,16 @@ namespace Talegen.Common.Models.Contacts
             }
 
             return email;
+        }
+
+        /// <summary>
+        /// This method is used to determine if the e-mail address is valid.
+        /// </summary>
+        /// <returns>Returns a value indicating whether the address is valid.</returns>
+        public bool IsValid()
+        {
+            EmailAddressAttribute emailAddressAttribute = new EmailAddressAttribute();
+            return !string.IsNullOrWhiteSpace(this.Address) && emailAddressAttribute.IsValid(this.Address);
         }
     }
 }
