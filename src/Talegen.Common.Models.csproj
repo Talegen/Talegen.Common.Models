@@ -13,10 +13,10 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Common.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Models</PackageTags>
-    <PackageReleaseNotes>Refactored classes, and related extension methods.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated dependencies.</PackageReleaseNotes>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <Version>1.0.14.0</Version>
+    <Version>1.0.15.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <Nullable>enable</Nullable>
     <Title>Talegen.Common.Models</Title>
@@ -29,7 +29,7 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.12" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.0.15" />
   </ItemGroup>
 
   <ItemGroup>
