@@ -16,13 +16,10 @@
 
 namespace Talegen.Common.Models.Security
 {
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
+    
     /// <summary>
     /// Contains an enumerated list of role types.
     /// </summary>
-    [JsonConverter(typeof(StringEnumConverter))]
     public enum RoleTypes
     {
         /// <summary>

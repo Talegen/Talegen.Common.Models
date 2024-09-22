@@ -17,14 +17,12 @@
 namespace Talegen.Common.Models.Contacts
 {
     using System;
-    using System.ComponentModel.DataAnnotations;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// Contains an enumerated list of address types.
     /// </summary>
-    [JsonConverter(typeof(StringEnumConverter))]
+
     public enum AddressTypes
     {
         /// <summary>

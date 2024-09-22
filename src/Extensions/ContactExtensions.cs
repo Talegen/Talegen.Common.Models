@@ -18,7 +18,6 @@ namespace Talegen.Common.Models.Extensions
 {
     using System;
     using System.Security.Claims;
-    using Newtonsoft.Json;
     using Talegen.Common.Models.Contacts;
     using Talegen.Common.Models.Extensions.Internal;
 
@@ -67,7 +66,7 @@ namespace Talegen.Common.Models.Extensions
 
             if (!string.IsNullOrWhiteSpace(claimValue))
             {
-                JwtAddressModel jwtModel = JsonConvert.DeserializeObject<JwtAddressModel>(claimValue);
+                JwtAddressModel? jwtModel = System.Text.Json.JsonSerializer.Deserialize<JwtAddressModel>(claimValue);
 
                 if (jwtModel != null)
                 {
@@ -109,7 +108,7 @@ namespace Talegen.Common.Models.Extensions
                     Formatted = address.Formatted
                 };
 
-                result = JsonConvert.SerializeObject(jwtAddressModel); 
+                result = System.Text.Json.JsonSerializer.Serialize(jwtAddressModel); 
             }
             
             return result;

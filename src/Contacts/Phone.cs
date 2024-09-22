@@ -17,13 +17,10 @@
 namespace Talegen.Common.Models.Contacts
 {
     using System.ComponentModel.DataAnnotations;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
+    
     /// <summary>
     /// Contains an enumerated list of phone types.
     /// </summary>
-    [JsonConverter(typeof(StringEnumConverter))]
     public enum PhoneTypes
     {
         /// <summary>
